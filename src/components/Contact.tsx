@@ -103,8 +103,8 @@ const Contact = () => {
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-blue-400 to-purple-400 mx-auto mb-4"></div>
           <p className="text-gray-300 text-lg max-w-3xl mx-auto">
-            Let's connect and explore opportunities in Software Engineering, AI, Data Analytics, 
-            or Space Technology. I'm always excited to discuss innovative projects and collaborations.
+            Let&apos;s connect and explore opportunities in Software Engineering, AI, Data Analytics, 
+            or Space Technology. I&apos;m always excited to discuss innovative projects and collaborations.
           </p>
         </motion.div>
 
@@ -303,7 +303,7 @@ const Contact = () => {
                   className="flex items-center gap-2 text-green-400 text-sm mt-2"
                 >
                   <CheckCircle size={16} />
-                  Message sent successfully! I'll get back to you soon.
+                  Message sent successfully! I&apos;ll get back to you soon.
                 </motion.div>
               )}
 

@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { ExternalLink, Github, Music, Bot, Heart, Rocket, DollarSign, Eye } from 'lucide-react'
+import { ExternalLink, Github, Music, Bot, Heart, Rocket, Eye } from 'lucide-react'
 
 const Projects = () => {
   const projects = [

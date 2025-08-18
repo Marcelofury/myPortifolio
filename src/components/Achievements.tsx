@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Trophy, Users, Award, Zap, Target, Star } from 'lucide-react'
+import { Trophy, Users, Zap, Target, Star } from 'lucide-react'
 
 const Achievements = () => {
   const achievements = [

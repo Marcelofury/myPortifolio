@@ -39,7 +39,7 @@ const About = () => {
                 <h3 className="text-2xl font-semibold text-white">Who I Am</h3>
               </div>
               <p className="text-gray-300 leading-relaxed group-hover:text-gray-200 transition-colors duration-300">
-                I'm a passionate Software Engineering student at Uganda Technology and Management University (UTAMU), 
+                I&apos;m a passionate Software Engineering student at Uganda Technology and Management University (UTAMU), 
                 deeply interested in the intersection of technology and space exploration. My journey combines 
                 rigorous academic learning with hands-on project development.
               </p>
@@ -54,7 +54,7 @@ const About = () => {
               </div>
               <p className="text-gray-300 leading-relaxed group-hover:text-gray-200 transition-colors duration-300">
                 Based in <span className="text-green-400 font-semibold">Kampala, Uganda</span>, 
-                I'm working on projects that bridge local innovation with global technology trends, 
+                I&apos;m working on projects that bridge local innovation with global technology trends, 
                 contributing to the African tech ecosystem.
               </p>
             </div>
