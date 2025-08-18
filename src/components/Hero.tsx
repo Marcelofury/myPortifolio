@@ -1,0 +1,141 @@
+'use client'
+
+import { motion } from 'framer-motion'
+import { ChevronDown } from 'lucide-react'
+import Image from 'next/image'
+
+const Hero = () => {
+  return (
+    <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
+      {/* Hero background effects */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute -top-40 -right-40 w-80 h-80 bg-purple-500/20 rounded-full blur-3xl"></div>
+        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-blue-500/20 rounded-full blur-3xl"></div>
+      </div>
+      
+      <div className="max-w-6xl mx-auto px-4 relative z-10">
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="grid lg:grid-cols-2 gap-12 items-center min-h-[80vh]"
+        >
+          {/* Left Side - Text Content */}
+          <div className="text-center lg:text-left space-y-8">
+            <motion.h1
+              className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight"
+              initial={{ opacity: 0, scale: 0.5 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+            >
+              <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent drop-shadow-lg">
+                Marcel Butera
+              </span>
+            </motion.h1>
+            
+            <motion.div
+              className="space-y-4"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+            >
+              <p className="text-xl md:text-2xl text-gray-300 font-medium">
+                Software Engineer | Data Analyst | AI Enthusiast
+              </p>
+              
+              <p className="text-lg md:text-xl text-gray-400 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+                Passionate about building innovative solutions in Software Engineering, 
+                Data Analytics, Artificial Intelligence, and Space Technology. 
+                <span className="text-yellow-400 font-semibold block mt-2"> Dream: To work at SpaceX, NASA, or ESA.</span>
+              </p>
+            </motion.div>
+            
+            <motion.div
+              className="flex flex-col sm:flex-row gap-6 justify-center lg:justify-start items-center pt-8"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.8 }}
+            >
+              <motion.a
+                href="#contact"
+                className="group px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-full font-semibold text-lg shadow-2xl hover:shadow-blue-500/25 transition-all duration-300"
+                whileHover={{ scale: 1.05, y: -2 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <span className="flex items-center gap-2">
+                  Get In Touch
+                  <span className="group-hover:translate-x-1 transition-transform duration-200">→</span>
+                </span>
+              </motion.a>
+              <motion.a
+                href="#projects"
+                className="group px-8 py-4 border-2 border-purple-400 text-purple-400 rounded-full font-semibold text-lg hover:bg-purple-400 hover:text-white transition-all duration-300"
+                whileHover={{ scale: 1.05, y: -2 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <span className="flex items-center gap-2">
+                  View Projects
+                  <span className="group-hover:translate-x-1 transition-transform duration-200">⚡</span>
+                </span>
+              </motion.a>
+            </motion.div>
+          </div>
+
+          {/* Right Side - Profile Image */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.5, x: 100 }}
+            animate={{ opacity: 1, scale: 1, x: 0 }}
+            transition={{ duration: 0.8, delay: 0.1 }}
+            className="flex justify-center lg:justify-end"
+          >
+            <div className="relative">
+              {/* Floating animation wrapper */}
+              <motion.div
+                animate={{ y: [0, -10, 0] }}
+                transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+                className="w-72 h-72 md:w-80 md:h-80"
+              >
+                {/* Gradient border */}
+                <div className="w-full h-full rounded-2xl bg-gradient-to-br from-blue-400 via-purple-500 to-cyan-400 p-1 shadow-2xl">
+                  <div className="w-full h-full rounded-2xl overflow-hidden bg-slate-900">
+                    <Image
+                      src="/images/profile.jpg"
+                      alt="Marcel Butera - Software Engineer"
+                      width={320}
+                      height={320}
+                      className="w-full h-full object-cover"
+                      priority
+                      onError={(e) => {
+                        const target = e.target as HTMLImageElement;
+                        target.style.display = 'none';
+                        const parent = target.parentElement;
+                        if (parent) {
+                          parent.innerHTML = '<div class="w-full h-full flex items-center justify-center bg-gradient-to-br from-slate-800 to-slate-900"><span class="text-6xl">🚀</span></div>';
+                        }
+                      }}
+                    />
+                  </div>
+                </div>
+              </motion.div>
+              
+              {/* Decorative elements */}
+              <div className="absolute -top-4 -right-4 w-8 h-8 bg-yellow-400 rounded-full animate-pulse"></div>
+              <div className="absolute -bottom-6 -left-6 w-6 h-6 bg-cyan-400 rounded-full animate-pulse delay-500"></div>
+              <div className="absolute top-1/2 -left-8 w-4 h-4 bg-purple-400 rounded-full animate-bounce delay-1000"></div>
+            </div>
+          </motion.div>
+        </motion.div>
+      </div>
+      
+      <motion.div
+        className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
+        animate={{ y: [0, 10, 0] }}
+        transition={{ duration: 2, repeat: Infinity }}
+      >
+        <ChevronDown className="text-gray-400 hover:text-white transition-colors duration-200" size={32} />
+      </motion.div>
+    </section>
+  )
+}
+
+export default Hero
