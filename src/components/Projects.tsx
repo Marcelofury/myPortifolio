@@ -218,6 +218,7 @@ const Projects = () => {
   }
 
   const getCardSize = (level: ImpactLevel) => {
+    // High Impact projects span 2 columns on large screens for prominence
     return level === 'High Impact' ? 'lg:col-span-2' : ''
   }
 
