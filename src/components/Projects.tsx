@@ -25,7 +25,6 @@ interface Project {
 
 const Projects = () => {
   const [filter, setFilter] = useState<string>('All')
-  const [sortBy, setSortBy] = useState<'impact' | 'date'>('impact')
 
   const projects: Project[] = [
     {
@@ -166,15 +165,13 @@ const Projects = () => {
       return project.category === filter
     })
     .sort((a, b) => {
-      if (sortBy === 'impact') {
-        const impactOrder: Record<ImpactLevel, number> = {
-          'High Impact': 1,
-          'Medium Impact': 2,
-          'Learning Project': 3
-        }
-        return impactOrder[a.impact.level] - impactOrder[b.impact.level]
+      // Always sort by impact level
+      const impactOrder: Record<ImpactLevel, number> = {
+        'High Impact': 1,
+        'Medium Impact': 2,
+        'Learning Project': 3
       }
-      return 0 // date sorting would go here if we had dates
+      return impactOrder[a.impact.level] - impactOrder[b.impact.level]
     })
 
   const filterOptions = ['All', 'High Impact', 'AI/ML', 'AI/Web', 'Web Development', 'Education', 'Utility', 'Space Tech']
