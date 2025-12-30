@@ -102,7 +102,20 @@ const Contact = () => {
             Get In Touch
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-blue-400 to-purple-400 mx-auto mb-4"></div>
-          <p className="text-gray-300 text-lg max-w-3xl mx-auto">
+          
+          {/* Availability Status */}
+          <motion.div
+            initial={{ scale: 0.9, opacity: 0 }}
+            whileInView={{ scale: 1, opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="inline-flex items-center gap-2 px-4 py-2 bg-green-500/20 border border-green-500/40 rounded-full text-green-400 mb-6"
+          >
+            <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
+            <span className="font-medium">Available for Opportunities</span>
+          </motion.div>
+          
+          <p className="text-gray-300 text-lg max-w-3xl mx-auto leading-relaxed">
             Let&apos;s connect and explore opportunities in Software Engineering, AI, Data Analytics, 
             or Space Technology. I&apos;m always excited to discuss innovative projects and collaborations.
           </p>
@@ -122,6 +135,10 @@ const Contact = () => {
                 <MessageCircle className="text-blue-400" size={24} />
                 Contact Information
               </h3>
+              
+              <p className="text-sm text-purple-400 mb-4 font-medium">
+                💬 Preferred: Email or LinkedIn for professional inquiries
+              </p>
               
               <div className="space-y-4">
                 {contactInfo.map((info, index) => (

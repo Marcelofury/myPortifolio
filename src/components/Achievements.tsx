@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Trophy, Users, Zap, Target, Star } from 'lucide-react'
+import { Trophy, Users, Zap, Target, Star, TrendingUp } from 'lucide-react'
 
 const Achievements = () => {
   const achievements = [
@@ -10,77 +10,88 @@ const Achievements = () => {
       description: 'Participated in AI for UN SDGs hackathon, developing innovative solutions for sustainable development goals.',
       icon: <Trophy className="text-yellow-400" size={24} />,
       category: 'Competition',
-      year: '2025'
+      year: '2025',
+      impact: 'Collaborated with team to create AI solutions addressing sustainability challenges'
     },
     {
       title: 'PyConUganda 2025 Conference',
       description: 'Attended PyConUganda conference in August 2025, Kampala - networking with Python developers and learning latest trends.',
       icon: <Users className="text-blue-400" size={24} />,
       category: 'Conference',
-      year: '2025'
+      year: '2025',
+      impact: 'Connected with 200+ Python developers, gained insights on AI/ML trends'
     },
     {
       title: 'Blockchain DevFest 2025',
       description: 'Participated in Blockchain DevFest 2025 in Kampala, Uganda - exploring decentralized technologies and Web3 innovations.',
       icon: <Zap className="text-purple-400" size={24} />,
       category: 'Conference',
-      year: '2025'
+      year: '2025',
+      impact: 'Enhanced understanding of blockchain technology and decentralized systems'
     },
     {
       title: 'Bitnob Developers Bootcamp & Hackathon',
       description: 'Attended intensive bootcamp and hackathon in Kampala focusing on fintech solutions and blockchain development.',
       icon: <Trophy className="text-green-400" size={24} />,
       category: 'Hackathon',
-      year: '2025'
+      year: '2025',
+      impact: 'Developed fintech prototype, learned blockchain development practices'
     },
     {
       title: 'DevOps Meetup - Docker & Kubernetes',
       description: 'Attended DevOps meetup on August 16th at Uganda ICT Hub Nakawa, learning containerization and orchestration technologies.',
       icon: <Target className="text-cyan-400" size={24} />,
       category: 'Meetup',
-      year: '2025'
+      year: '2025',
+      impact: 'Gained practical knowledge in Docker and Kubernetes for deployment'
     },
     {
       title: 'Google Developer Meetups',
       description: 'Attended Google Developer meetups in 2024 focusing on Flutter development and career guidance in tech.',
       icon: <Star className="text-orange-400" size={24} />,
       category: 'Meetup',
-      year: '2024'
+      year: '2024',
+      impact: 'Learned mobile development best practices and career progression strategies'
     },
     {
       title: 'IBM Z Datathon 2025',
       description: 'Scheduled to participate in IBM Z Datathon 2025 in October, focusing on mainframe technologies and data analytics solutions.',
       icon: <Trophy className="text-blue-400" size={24} />,
       category: 'Competition',
-      year: '2025'
+      year: '2025',
+      impact: 'Upcoming opportunity to work with enterprise-scale data analytics'
     },
     {
       title: 'VibeCoding DApp Workshop',
       description: 'Attended specialized workshop on Decentralized Application development and blockchain technologies.',
       icon: <Zap className="text-green-400" size={24} />,
       category: 'Workshop',
-      year: '2024'
+      year: '2024',
+      impact: 'Built foundational knowledge in DApp development and smart contracts'
     },
     {
       title: 'SDGs-CAP Cohort 4 Member',
       description: 'Selected as member of SDGs Capacity Building Program focusing on sustainable development initiatives.',
       icon: <Target className="text-cyan-400" size={24} />,
       category: 'Program',
-      year: '2024'
+      year: '2024',
+      impact: 'Contributing to sustainable development through technology solutions'
     },
     {
       title: 'Aspiring Google Developers Lead',
       description: 'Working towards becoming a Google Developers Lead to organize community events and foster tech innovation in Uganda.',
       icon: <Star className="text-red-400" size={24} />,
       category: 'Leadership',
-      year: 'Ongoing'
+      year: 'Ongoing',
+      impact: 'Building tech community leadership skills and event organization experience'
     },
     {
       title: 'Aspiring GitHub Campus Expert',
       description: 'Working towards becoming a GitHub Campus Expert to lead tech community initiatives and open source contributions.',
       icon: <Star className="text-orange-400" size={24} />,
       category: 'Community',
-      year: 'Ongoing'
+      year: 'Ongoing',
+      impact: 'Developing open-source contribution practices and community mentorship'
     }
   ]
 
@@ -182,6 +193,15 @@ const Achievements = () => {
               <p className="text-gray-300 leading-relaxed group-hover:text-gray-200 transition-colors duration-300">
                 {achievement.description}
               </p>
+              
+              {/* Impact indicator */}
+              <div className="mt-3 pt-3 border-t border-purple-500/20">
+                <p className="text-xs text-gray-400 mb-1 flex items-center gap-1">
+                  <TrendingUp size={12} className="text-purple-400" />
+                  Impact:
+                </p>
+                <p className="text-sm text-gray-300 italic">{achievement.impact}</p>
+              </div>
             </motion.div>
           ))}
         </div>
