@@ -58,6 +58,7 @@ const ProfessionalDevelopment = () => {
       provider: 'Refactory Academy',
       date: 'Completed',
       type: 'Certification',
+      status: 'Completed',
       icon: <CheckCircle className="text-cyan-400" size={24} />,
       description: 'Full-stack development training and certification'
     },
@@ -66,6 +67,7 @@ const ProfessionalDevelopment = () => {
       provider: 'Online Learning',
       date: 'In Progress',
       type: 'Certification',
+      status: 'In Progress',
       icon: <FileText className="text-purple-400" size={24} />,
       description: 'ISTQB-aligned software testing principles and practices'
     }

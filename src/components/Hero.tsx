@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { ChevronDown, Download, Briefcase, Code, Award, Users, Zap } from 'lucide-react'
+import { ChevronDown, Download, Briefcase, Code, Award, Zap } from 'lucide-react'
 import Image from 'next/image'
 import { useEffect, useState } from 'react'
 
@@ -44,6 +44,7 @@ const Hero = () => {
 
     const timer = setTimeout(handleTyping, typingSpeed)
     return () => clearTimeout(timer)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [typingText, isDeleting, loopNum, typingSpeed])
 
   const quickStats = [
