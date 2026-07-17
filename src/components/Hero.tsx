@@ -1,10 +1,17 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { ChevronDown } from 'lucide-react'
+import { ChevronDown, Download, Briefcase, Code, Award, Users } from 'lucide-react'
 import Image from 'next/image'
 
 const Hero = () => {
+  const quickStats = [
+    { icon: <Briefcase size={20} />, label: 'Experience', value: '2+ Years' },
+    { icon: <Code size={20} />, label: 'Projects', value: '8+ Active' },
+    { icon: <Award size={20} />, label: 'Technologies', value: '15+' },
+    { icon: <Users size={20} />, label: 'Impact', value: '500+ Users' }
+  ]
+
   return (
     <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
       {/* Hero background effects */}
@@ -57,6 +64,18 @@ const Hero = () => {
               transition={{ duration: 0.8, delay: 0.8 }}
             >
               <motion.a
+                href="/resume.pdf"
+                download
+                className="group px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-600 text-white rounded-full font-semibold text-lg shadow-2xl hover:shadow-green-500/25 transition-all duration-300"
+                whileHover={{ scale: 1.05, y: -2 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <span className="flex items-center gap-2">
+                  <Download size={20} />
+                  Download Resume
+                </span>
+              </motion.a>
+              <motion.a
                 href="#contact"
                 className="group px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-full font-semibold text-lg shadow-2xl hover:shadow-blue-500/25 transition-all duration-300"
                 whileHover={{ scale: 1.05, y: -2 }}
@@ -78,6 +97,29 @@ const Hero = () => {
                   <span className="group-hover:translate-x-1 transition-transform duration-200">⚡</span>
                 </span>
               </motion.a>
+            </motion.div>
+
+            {/* Quick Stats */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 1 }}
+              className="grid grid-cols-2 sm:grid-cols-4 gap-4 mt-12 pt-8 border-t border-purple-500/20"
+            >
+              {quickStats.map((stat, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 0.5, delay: 1 + index * 0.1 }}
+                  className="bg-gradient-to-br from-slate-800/50 to-purple-900/20 backdrop-blur-sm rounded-xl p-4 border border-purple-500/20 text-center hover:border-purple-400/40 transition-all duration-300"
+                  whileHover={{ scale: 1.05, y: -2 }}
+                >
+                  <div className="flex justify-center mb-2 text-purple-400">{stat.icon}</div>
+                  <div className="text-2xl font-bold text-white mb-1">{stat.value}</div>
+                  <div className="text-gray-400 text-sm">{stat.label}</div>
+                </motion.div>
+              ))}
             </motion.div>
           </div>
 
