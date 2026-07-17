@@ -116,8 +116,8 @@ const Hero = () => {
               transition={{ duration: 0.8, delay: 0.8 }}
             >
               <motion.a
-                href="/resume.pdf"
-                download
+                href="/resume.html"
+                target="_blank"
                 className="group px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-600 text-white rounded-full font-semibold text-lg shadow-2xl hover:shadow-green-500/25 transition-all duration-300"
                 whileHover={{ scale: 1.05, y: -2 }}
                 whileTap={{ scale: 0.95 }}
