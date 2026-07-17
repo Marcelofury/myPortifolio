@@ -47,9 +47,9 @@ const Projects = () => {
     {
       title: 'AgriSupply Farm Connect System',
       description: 'Digital marketplace that connects farmers and buyers in Uganda, enabling direct trade and reducing middlemen.',
-      technologies: ['JavaScript', 'Node.js', 'Express.js', 'MongoDB', 'React'],
+      technologies: ['JavaScript', 'Node.js', 'Express.js', 'MongoDB','Dart', 'Flutter'],
       icon: <Tractor className="text-yellow-400" size={24} />,
-      category: 'Web Development',
+      category: 'App Development',
       status: 'Completed',
       github: 'https://github.com/Marcelofury/AgriSupply-Farm-Connect-System',
       demo: null,
@@ -63,9 +63,9 @@ const Projects = () => {
     {
       title: 'Gabbage Free City',
       description: 'Smart waste management system for Kampala, using technology to optimize waste collection and recycling.',
-      technologies: ['JavaScript', 'Node.js', 'React', 'MongoDB'],
+      technologies: ['JavaScript', 'Node.js','Dart', 'Flutter', 'MongoDB'],
       icon: <Recycle className="text-cyan-400" size={24} />,
-      category: 'Web Development',
+      category: 'App Development',
       status: 'Completed',
       github: 'https://github.com/Marcelofury/GabbageFreeCity',
       demo: null,
@@ -95,7 +95,7 @@ const Projects = () => {
     {
       title: 'MercaShop',
       description: 'E-commerce platform designed for seamless online shopping experience with modern web technologies.',
-      technologies: ['JavaScript', 'Node.js', 'Express.js', 'MongoDB'],
+      technologies: ['JavaScript', 'vue js','Node.js', 'Express.js', 'MongoDB'],
       icon: <ShoppingBag className="text-blue-400" size={24} />,
       category: 'Web Development',
       status: 'Completed',
