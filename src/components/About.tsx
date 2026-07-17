@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { MapPin, User, Target } from 'lucide-react'
+import { MapPin, User, Target, Code, Bug, GraduationCap, Briefcase } from 'lucide-react'
 
 const About = () => {
   return (
@@ -23,7 +23,8 @@ const About = () => {
           </p>
         </motion.div>
 
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="grid lg:grid-cols-2 gap-12 items-start">
+          {/* Left Column */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -31,6 +32,7 @@ const About = () => {
             transition={{ duration: 0.8 }}
             className="space-y-8"
           >
+            {/* Who I Am */}
             <div className="glass-effect rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
               <div className="flex items-center gap-4 mb-6">
                 <div className="p-3 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-xl border border-blue-500/30 group-hover:border-blue-400/50 transition-all duration-300">
@@ -39,71 +41,107 @@ const About = () => {
                 <h3 className="text-2xl font-semibold text-white">Who I Am</h3>
               </div>
               <p className="text-gray-300 leading-relaxed group-hover:text-gray-200 transition-colors duration-300">
-                I&apos;m a passionate Software Engineering student at Uganda Technology and Management University (UTAMU), 
-                deeply interested in the intersection of technology and space exploration. My journey combines 
-                rigorous academic learning with hands-on project development.
+                I am a <span className="text-blue-400 font-semibold">Software Engineering</span> student at 
+                <span className="text-purple-400 font-semibold"> UTAMU</span> (Uganda Technology and Management University) 
+                and a <span className="text-cyan-400 font-semibold">Fullstack Web Developer (MEVN STACK)</span>, 
+                Backend developer in Node/Express.js and Java. I enjoy building practical solutions, 
+                learning deeply, and contributing to meaningful projects.
               </p>
             </div>
 
+            {/* Software Testing */}
             <div className="glass-effect rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
               <div className="flex items-center gap-4 mb-6">
                 <div className="p-3 bg-gradient-to-br from-green-500/20 to-emerald-500/20 rounded-xl border border-green-500/30 group-hover:border-green-400/50 transition-all duration-300">
-                  <MapPin className="text-green-400" size={24} />
+                  <Bug className="text-green-400" size={24} />
                 </div>
-                <h3 className="text-2xl font-semibold text-white">Location & Impact</h3>
+                <h3 className="text-2xl font-semibold text-white">Software Testing</h3>
               </div>
               <p className="text-gray-300 leading-relaxed group-hover:text-gray-200 transition-colors duration-300">
-                Based in <span className="text-green-400 font-semibold">Kampala, Uganda</span>, 
-                I&apos;m working on projects that bridge local innovation with global technology trends, 
-                contributing to the African tech ecosystem.
+                I am a <span className="text-green-400 font-semibold">Junior Software Tester</span> and my main goal 
+                is to find <span className="text-yellow-400 font-semibold">defects</span> in systems, make test scenarios 
+                and test cases, bug reports using tools like <span className="text-purple-400 font-semibold">Postman, Bruno, JIRA</span> 
+                and <span className="text-cyan-400 font-semibold">SQL queries</span> in the database.
+              </p>
+            </div>
+
+            {/* Location */}
+            <div className="glass-effect rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
+              <div className="flex items-center gap-4 mb-6">
+                <div className="p-3 bg-gradient-to-br from-orange-500/20 to-red-500/20 rounded-xl border border-orange-500/30 group-hover:border-orange-400/50 transition-all duration-300">
+                  <MapPin className="text-orange-400" size={24} />
+                </div>
+                <h3 className="text-2xl font-semibold text-white">Location & Status</h3>
+              </div>
+              <p className="text-gray-300 leading-relaxed group-hover:text-gray-200 transition-colors duration-300">
+                Based in <span className="text-orange-400 font-semibold">Kampala, Uganda</span>. 
+                Open to <span className="text-green-400 font-semibold">Jobs, internships, hackathons & collaborations</span>.
               </p>
             </div>
           </motion.div>
 
+          {/* Right Column */}
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="glass-effect rounded-2xl p-8 hover:bg-white/10 transition-all duration-300"
+            className="space-y-8"
           >
-            <div className="flex items-center gap-4 mb-8">
-              <div className="p-3 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-xl border border-purple-500/30">
-                <Target className="text-purple-400" size={24} />
+            {/* Education & Focus */}
+            <div className="glass-effect rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
+              <div className="flex items-center gap-4 mb-6">
+                <div className="p-3 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-xl border border-purple-500/30 group-hover:border-purple-400/50 transition-all duration-300">
+                  <GraduationCap className="text-purple-400" size={24} />
+                </div>
+                <h3 className="text-2xl font-semibold text-white">Education & Focus</h3>
               </div>
-              <h3 className="text-2xl font-semibold text-white">My Mission</h3>
+              <ul className="space-y-3">
+                <li className="flex items-center gap-3 text-gray-300">
+                  <div className="w-2 h-2 bg-purple-400 rounded-full"></div>
+                  Software Engineering Student at <span className="text-purple-400 font-semibold">UTAMU</span>
+                </li>
+                <li className="flex items-center gap-3 text-gray-300">
+                  <div className="w-2 h-2 bg-blue-400 rounded-full"></div>
+                  Interested in <span className="text-blue-400 font-semibold">FullStack & Backend</span>
+                </li>
+                <li className="flex items-center gap-3 text-gray-300">
+                  <div className="w-2 h-2 bg-cyan-400 rounded-full"></div>
+                  Currently learning: <span className="text-cyan-400 font-semibold">Java</span>
+                </li>
+                <li className="flex items-center gap-3 text-gray-300">
+                  <div className="w-2 h-2 bg-green-400 rounded-full"></div>
+                  Pursuing: <span className="text-green-400 font-semibold">ISTQB Certification</span> for Testers
+                </li>
+              </ul>
             </div>
-            
-            <div className="space-y-6">
-              <div className="p-6 bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-xl border border-blue-500/20 hover:border-blue-400/40 transition-all duration-300 group">
-                <h4 className="font-semibold text-blue-400 mb-3 text-lg group-hover:text-blue-300 transition-colors duration-300">
-                  Space Technology
-                </h4>
-                <p className="text-gray-300 group-hover:text-gray-200 transition-colors duration-300">
-                  Building innovative solutions for space exploration and satellite technology
-                </p>
+
+            {/* Career Goals */}
+            <div className="glass-effect rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
+              <div className="flex items-center gap-4 mb-6">
+                <div className="p-3 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded-xl border border-cyan-500/30 group-hover:border-cyan-400/50 transition-all duration-300">
+                  <Target className="text-cyan-400" size={24} />
+                </div>
+                <h3 className="text-2xl font-semibold text-white">Career Goals</h3>
               </div>
-              
-              <div className="p-6 bg-gradient-to-r from-purple-500/10 to-cyan-500/10 rounded-xl border border-purple-500/20 hover:border-purple-400/40 transition-all duration-300 group">
-                <h4 className="font-semibold text-purple-400 mb-3 text-lg group-hover:text-purple-300 transition-colors duration-300">
-                  Artificial Intelligence
-                </h4>
-                <p className="text-gray-300 group-hover:text-gray-200 transition-colors duration-300">
-                  Developing AI systems that solve real-world problems and enhance human capabilities
-                </p>
-              </div>
-              
-              <div className="p-6 bg-gradient-to-r from-cyan-500/10 to-blue-500/10 rounded-xl border border-cyan-500/20 hover:border-cyan-400/40 transition-all duration-300 group">
-                <h4 className="font-semibold text-cyan-400 mb-3 text-lg group-hover:text-cyan-300 transition-colors duration-300">
-                  Data Analytics
-                </h4>
-                <p className="text-gray-300 group-hover:text-gray-200 transition-colors duration-300">
-                  Extracting insights from complex datasets to drive informed decision-making
-                </p>
-              </div>
+              <ul className="space-y-3">
+                <li className="flex items-center gap-3 text-gray-300">
+                  <div className="w-2 h-2 bg-cyan-400 rounded-full"></div>
+                  Work in global tech & space-related organizations
+                </li>
+                <li className="flex items-center gap-3 text-gray-300">
+                  <div className="w-2 h-2 bg-purple-400 rounded-full"></div>
+                  Specialize in AI system building
+                </li>
+                <li className="flex items-center gap-3 text-gray-300">
+                  <div className="w-2 h-2 bg-yellow-400 rounded-full"></div>
+                  Build solutions in Financial Engineering and Space Tech
+                </li>
+              </ul>
             </div>
-            
-            <div className="mt-8 p-6 bg-gradient-to-r from-yellow-500/10 to-orange-500/10 rounded-xl border border-yellow-500/20 text-center">
+
+            {/* Mission */}
+            <div className="p-6 bg-gradient-to-r from-yellow-500/10 to-orange-500/10 rounded-xl border border-yellow-500/20 text-center">
               <p className="text-yellow-400 font-semibold text-lg">
                 Ultimate Goal: Join SpaceX, NASA, or ESA
               </p>
