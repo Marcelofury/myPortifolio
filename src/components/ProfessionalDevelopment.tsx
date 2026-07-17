@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Award, Calendar, ExternalLink, FileText, Trophy, Users, Star, CheckCircle } from 'lucide-react'
+import { Award, Calendar, FileText, Trophy, Users, Star, CheckCircle } from 'lucide-react'
 
 const ProfessionalDevelopment = () => {
   const workshops = [
