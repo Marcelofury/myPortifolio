@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Users, Rocket, Code, TrendingUp, Award, Globe, Bot, Heart } from 'lucide-react'
+import { Users, Rocket, Code, TrendingUp, Award, Globe } from 'lucide-react'
 
 const ImpactHighlights = () => {
   const impactMetrics = [
@@ -39,7 +39,7 @@ const ImpactHighlights = () => {
     },
     {
       icon: <Award className="text-yellow-400" size={32} />,
-      value: '20+',
+      value: '10+',
       label: 'Tech Events',
       description: 'Hackathons & conferences',
       color: 'from-yellow-500/20 to-orange-500/20',
@@ -59,22 +59,22 @@ const ImpactHighlights = () => {
     {
       title: 'AI Systems Deployed',
       impact: 'Music recommendation and travel guide systems serving users',
-      icon: <Bot className="text-purple-400" size={32} />
+      icon: '🤖'
     },
     {
       title: 'Charity Digital Presence',
       impact: 'Enabled online donations and awareness for children\'s NGO',
-      icon: <Heart className="text-red-400" size={32} />
+      icon: '❤️'
     },
     {
       title: 'Space Technology',
       impact: 'Contributing to NASA satellite simulation tools',
-      icon: <Rocket className="text-cyan-400" size={32} />
+      icon: '🚀'
     },
     {
       title: 'Community Building',
-      impact: 'Leading UTAMU Innovation Club and GDG on Campus initiatives',
-      icon: <Users className="text-yellow-400" size={32} />
+      impact: 'Active participation in tech community events and mentorship',
+      icon: '🌟'
     }
   ]
 
@@ -110,6 +110,7 @@ const ImpactHighlights = () => {
               className={`relative group bg-gradient-to-br ${metric.color} backdrop-blur-sm rounded-2xl p-6 border ${metric.borderColor} hover:border-opacity-60 transition-all duration-300 overflow-hidden`}
               whileHover={{ scale: 1.05, y: -5 }}
             >
+              {/* Glassmorphism effect */}
               <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               
               <div className="relative z-10">
@@ -174,6 +175,7 @@ const ImpactHighlights = () => {
           </div>
         </motion.div>
 
+        {/* Summary Stats */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}

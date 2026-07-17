@@ -137,7 +137,7 @@ const Contact = () => {
               </h3>
               
               <p className="text-sm text-purple-400 mb-4 font-medium">
-                Preferred: Email or LinkedIn for professional inquiries
+                💬 Preferred: Email or LinkedIn for professional inquiries
               </p>
               
               <div className="space-y-4">

@@ -1,56 +1,16 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { ChevronDown, Download, Briefcase, Code, Award, Users, Zap } from 'lucide-react'
+import { ChevronDown, Download, Briefcase, Code, Award, Users } from 'lucide-react'
 import Image from 'next/image'
 import { useEffect, useState } from 'react'
 
 const Hero = () => {
-  const [typingText, setTypingText] = useState('')
-  const [isDeleting, setIsDeleting] = useState(false)
-  const [loopNum, setLoopNum] = useState(0)
-  const [typingSpeed, setTypingSpeed] = useState(150)
-  
-  const roles = [
-    'Junior Software Tester',
-    'QUALITY ASSURANCE (QA) ENGINEER',
-    'Software Engineering Student',
-    'Full Stack Javascript Developer',
-    'Tech for Impact',
-    'Learning Every Day',
-    'Open to Collaboration'
-  ]
-
-  useEffect(() => {
-    const handleTyping = () => {
-      const currentIndex = loopNum % roles.length
-      const fullText = roles[currentIndex]
-
-      setTypingText(
-        isDeleting
-          ? fullText.substring(0, typingText.length - 1)
-          : fullText.substring(0, typingText.length + 1)
-      )
-
-      setTypingSpeed(isDeleting ? 50 : 150)
-
-      if (!isDeleting && typingText === fullText) {
-        setTimeout(() => setIsDeleting(true), 1500)
-      } else if (isDeleting && typingText === '') {
-        setIsDeleting(false)
-        setLoopNum(loopNum + 1)
-      }
-    }
-
-    const timer = setTimeout(handleTyping, typingSpeed)
-    return () => clearTimeout(timer)
-  }, [typingText, isDeleting, loopNum, typingSpeed])
-
   const quickStats = [
     { icon: <Briefcase size={20} />, label: 'Experience', value: '2+ Years' },
-    { icon: <Code size={20} />, label: 'Projects', value: '60+ Repos' },
+    { icon: <Code size={20} />, label: 'Projects', value: '8+ Active' },
     { icon: <Award size={20} />, label: 'Technologies', value: '15+' },
-    { icon: <Zap size={20} />, label: 'Impact', value: '500+ Users' }
+    { icon: <Users size={20} />, label: 'Impact', value: '500+ Users' }
   ]
 
   return (

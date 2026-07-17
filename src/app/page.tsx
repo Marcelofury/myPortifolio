@@ -28,6 +28,7 @@ export default function Home() {
       <main className="relative z-10">
         <Hero />
         <About />
+        <ImpactHighlights />
         <Education />
         <Experience />
         <Skills />

@@ -50,14 +50,12 @@ const Skills = () => {
   ]
 
   const proficiencyLevels = [
-    { skill: 'Software Testing & QA', level: 85, years: '1+', proficiency: 'Advanced', color: 'bg-red-500' },
-    { skill: 'Postman & API Testing', level: 80, years: '1+', proficiency: 'Advanced', color: 'bg-blue-500' },
-    { skill: 'SQL & Database Management', level: 78, years: '1+', proficiency: 'Intermediate', color: 'bg-green-500' },
-    { skill: 'JIRA & Project Management', level: 75, years: '1+', proficiency: 'Intermediate', color: 'bg-orange-500' },
-    { skill: 'JavaScript (MEVN Stack)', level: 82, years: '2+', proficiency: 'Advanced', color: 'bg-yellow-500' },
-    { skill: 'Python (Data Analysis & Automation)', level: 88, years: '2+', proficiency: 'Expert', color: 'bg-purple-500' },
+    { skill: 'Python', level: 90, years: '2+', proficiency: 'Expert', color: 'bg-blue-500' },
+    { skill: 'JavaScript', level: 85, years: '2+', proficiency: 'Advanced', color: 'bg-yellow-500' },
     { skill: 'C Programming', level: 80, years: '2+', proficiency: 'Advanced', color: 'bg-gray-500' },
-    { skill: 'Flutter/Dart', level: 70, years: '1+', proficiency: 'Intermediate', color: 'bg-cyan-500' }
+    { skill: 'Data Analysis', level: 88, years: '2+', proficiency: 'Expert', color: 'bg-green-500' },
+    { skill: 'AI/ML', level: 82, years: '1+', proficiency: 'Advanced', color: 'bg-purple-500' },
+    { skill: 'React/Next.js', level: 75, years: '1+', proficiency: 'Intermediate', color: 'bg-cyan-500' }
   ]
 
   return (
