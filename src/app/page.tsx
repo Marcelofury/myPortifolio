@@ -6,6 +6,7 @@ import {
   Skills,
   Projects,
   Achievements,
+  ProfessionalDevelopment,
   Contact,
   Navigation,
   ImpactHighlights
@@ -32,6 +33,7 @@ export default function Home() {
         <Skills />
         <Projects />
         <ImpactHighlights />
+        <ProfessionalDevelopment />
         <Achievements />
         <Contact />
       </main>
