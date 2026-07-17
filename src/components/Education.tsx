@@ -9,27 +9,13 @@ const Education = () => {
       degree: 'BSc in Software Engineering',
       institution: 'Universal Technology and Management University (UTAMU)',
       period: '2024 - 2028',
-      location: 'Kampala, Uganda',
-      courses: [
-        'Structured Programming (C, Python, JavaScript)',
-        'Computer Systems Architecture',
-        'Software Architecture & Patterns',
-        'Operating Systems',
-        'Data Analytics'
-      ]
+      location: 'Kampala, Uganda'
     },
     {
       degree: 'Certificate in Software Engineering (JavaScript)',
       institution: 'Refactory Academy',
       period: 'Dec 2025 - Mar 2026',
-      location: 'Kampala, Uganda',
-      courses: [
-        'HTML, CSS, JavaScript',
-        'Vue.js, Node.js, Express.js',
-        'MongoDB',
-        'Deployment (Render, Vercel)',
-        'Git & GitHub'
-      ]
+      location: 'Kampala, Uganda'
     }
   ]
 
@@ -88,21 +74,8 @@ const Education = () => {
                   </div>
                 </div>
 
-                <div className="space-y-3">
-                  <h4 className="text-lg font-semibold text-purple-400 mb-3">Core Courses</h4>
-                  {edu.courses.map((course, idx) => (
-                    <motion.div
-                      key={idx}
-                      initial={{ opacity: 0, x: -20 }}
-                      whileInView={{ opacity: 1, x: 0 }}
-                      viewport={{ once: true }}
-                      transition={{ duration: 0.5, delay: idx * 0.1 }}
-                      className="flex items-center gap-3 p-3 bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-lg border border-blue-500/20"
-                    >
-                      <div className="w-2 h-2 bg-gradient-to-r from-blue-400 to-purple-400 rounded-full"></div>
-                      <span className="text-gray-300">{course}</span>
-                    </motion.div>
-                  ))}
+                <div className="mt-4 p-4 bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-lg border border-blue-500/20">
+                  <p className="text-gray-300 text-sm">Currently pursuing degree with focus on software engineering principles, data structures, and system design.</p>
                 </div>
               </motion.div>
             ))}

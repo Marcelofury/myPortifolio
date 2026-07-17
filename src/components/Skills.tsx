@@ -55,7 +55,8 @@ const Skills = () => {
     { skill: 'C Programming', level: 80, years: '2+', proficiency: 'Advanced', color: 'bg-gray-500' },
     { skill: 'Data Analysis', level: 88, years: '2+', proficiency: 'Expert', color: 'bg-green-500' },
     { skill: 'AI/ML', level: 82, years: '1+', proficiency: 'Advanced', color: 'bg-purple-500' },
-    { skill: 'React/Next.js', level: 75, years: '1+', proficiency: 'Intermediate', color: 'bg-cyan-500' }
+    { skill: 'Software Testing', level: 85, years: '1+', proficiency: 'Advanced', color: 'bg-red-500' },
+    { skill: 'Rust', level: 60, years: '1+', proficiency: 'Intermediate', color: 'bg-orange-500' }
   ]
 
   return (

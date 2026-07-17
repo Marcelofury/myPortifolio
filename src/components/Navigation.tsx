@@ -40,7 +40,7 @@ const Navigation = () => {
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            className="text-2xl font-bold"
+            className="text-2xl font-bold flex-shrink-0"
           >
             <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
               Marcel Butera
@@ -49,13 +49,13 @@ const Navigation = () => {
           </motion.div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
-            <div className="flex space-x-8">
+          <div className="hidden md:flex items-center gap-2 ml-4">
+            <div className="flex items-center gap-1 flex-shrink-0">
               {navItems.map((item, index) => (
                 <motion.a
                   key={item.name}
                   href={item.href}
-                  className="relative text-gray-300 hover:text-white transition-colors duration-200 py-2 px-3 rounded-lg hover:bg-white/5"
+                  className="relative text-gray-300 hover:text-white transition-colors duration-200 py-2 px-2 rounded-lg hover:bg-white/5 text-sm whitespace-nowrap"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   initial={{ opacity: 0, y: -20 }}
