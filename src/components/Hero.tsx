@@ -102,9 +102,9 @@ const Hero = () => {
               
               <p className="text-lg md:text-xl text-gray-400 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
                 Detail-oriented Software Engineering student with over 2 years of hands-on experience 
-                in full-stack web development, data validation, and API integration. 
+                in full-stack web development, Software Testing, and API integration. 
                 <span className="text-cyan-400 font-semibold block mt-2">
-                  Focused on building impactful solutions through quality code.
+                  Focused on building impactful solutions through quality code and also testing code to reduce defects and ensure quality code is produced.
                 </span>
               </p>
             </motion.div>
