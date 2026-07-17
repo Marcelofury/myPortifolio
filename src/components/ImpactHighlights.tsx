@@ -7,9 +7,9 @@ const ImpactHighlights = () => {
   const impactMetrics = [
     {
       icon: <Users className="text-blue-400" size={32} />,
-      value: '500+',
+      value: '10+',
       label: 'Users Served',
-      description: 'Across AI and web applications',
+      description: 'Across AI ,mobile apps and web applications',
       color: 'from-blue-500/20 to-cyan-500/20',
       borderColor: 'border-blue-500/30'
     },

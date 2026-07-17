@@ -347,11 +347,9 @@ const Contact = () => {
           className="mt-16 text-center border-t border-purple-500/20 pt-8"
         >
           <p className="text-gray-400">
-            © 2025 Marcel Butera. Built with Next.js, Tailwind CSS, and Framer Motion.
+            © 2025 Marcel Butera. 
           </p>
-          <p className="text-gray-500 text-sm mt-2">
-            Ready to join SpaceX, NASA, or ESA
-          </p>
+          
         </motion.div>
       </div>
     </section>
