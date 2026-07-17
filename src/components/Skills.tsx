@@ -43,12 +43,12 @@ const Skills = () => {
   ]
 
   const proficiencyLevels = [
-    { skill: 'Python', level: 90, color: 'bg-blue-500' },
-    { skill: 'JavaScript', level: 85, color: 'bg-yellow-500' },
-    { skill: 'C Programming', level: 80, color: 'bg-gray-500' },
-    { skill: 'Data Analysis', level: 88, color: 'bg-green-500' },
-    { skill: 'AI/ML', level: 82, color: 'bg-purple-500' },
-    { skill: 'React/Next.js', level: 75, color: 'bg-cyan-500' }
+    { skill: 'Python', level: 90, years: '2+', proficiency: 'Expert', color: 'bg-blue-500' },
+    { skill: 'JavaScript', level: 85, years: '2+', proficiency: 'Advanced', color: 'bg-yellow-500' },
+    { skill: 'C Programming', level: 80, years: '2+', proficiency: 'Advanced', color: 'bg-gray-500' },
+    { skill: 'Data Analysis', level: 88, years: '2+', proficiency: 'Expert', color: 'bg-green-500' },
+    { skill: 'AI/ML', level: 82, years: '1+', proficiency: 'Advanced', color: 'bg-purple-500' },
+    { skill: 'React/Next.js', level: 75, years: '1+', proficiency: 'Intermediate', color: 'bg-cyan-500' }
   ]
 
   return (
@@ -128,8 +128,16 @@ const Skills = () => {
                 className="space-y-2"
               >
                 <div className="flex justify-between items-center">
-                  <span className="text-gray-300 font-medium">{item.skill}</span>
-                  <span className="text-gray-400 text-sm">{item.level}%</span>
+                  <div className="flex items-center gap-3">
+                    <span className="text-gray-300 font-medium">{item.skill}</span>
+                    <span className="px-2 py-0.5 text-xs bg-purple-500/20 text-purple-400 rounded-full border border-purple-500/30">
+                      {item.proficiency}
+                    </span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <span className="text-gray-500 text-xs">{item.years} years</span>
+                    <span className="text-gray-400 text-sm font-medium">{item.level}%</span>
+                  </div>
                 </div>
                 <div className="w-full bg-gray-700/50 rounded-full h-2">
                   <motion.div

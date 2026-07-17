@@ -77,7 +77,7 @@ const About = () => {
             <div className="space-y-6">
               <div className="p-6 bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-xl border border-blue-500/20 hover:border-blue-400/40 transition-all duration-300 group">
                 <h4 className="font-semibold text-blue-400 mb-3 text-lg group-hover:text-blue-300 transition-colors duration-300">
-                  🚀 Space Technology
+                  Space Technology
                 </h4>
                 <p className="text-gray-300 group-hover:text-gray-200 transition-colors duration-300">
                   Building innovative solutions for space exploration and satellite technology
@@ -86,7 +86,7 @@ const About = () => {
               
               <div className="p-6 bg-gradient-to-r from-purple-500/10 to-cyan-500/10 rounded-xl border border-purple-500/20 hover:border-purple-400/40 transition-all duration-300 group">
                 <h4 className="font-semibold text-purple-400 mb-3 text-lg group-hover:text-purple-300 transition-colors duration-300">
-                  🤖 Artificial Intelligence
+                  Artificial Intelligence
                 </h4>
                 <p className="text-gray-300 group-hover:text-gray-200 transition-colors duration-300">
                   Developing AI systems that solve real-world problems and enhance human capabilities
@@ -95,7 +95,7 @@ const About = () => {
               
               <div className="p-6 bg-gradient-to-r from-cyan-500/10 to-blue-500/10 rounded-xl border border-cyan-500/20 hover:border-cyan-400/40 transition-all duration-300 group">
                 <h4 className="font-semibold text-cyan-400 mb-3 text-lg group-hover:text-cyan-300 transition-colors duration-300">
-                  📊 Data Analytics
+                  Data Analytics
                 </h4>
                 <p className="text-gray-300 group-hover:text-gray-200 transition-colors duration-300">
                   Extracting insights from complex datasets to drive informed decision-making
@@ -105,7 +105,7 @@ const About = () => {
             
             <div className="mt-8 p-6 bg-gradient-to-r from-yellow-500/10 to-orange-500/10 rounded-xl border border-yellow-500/20 text-center">
               <p className="text-yellow-400 font-semibold text-lg">
-                🌟 Ultimate Goal: Join SpaceX, NASA, or ESA
+                Ultimate Goal: Join SpaceX, NASA, or ESA
               </p>
               <p className="text-gray-400 text-sm mt-2">
                 Working towards making humanity a multi-planetary species

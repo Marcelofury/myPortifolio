@@ -7,7 +7,8 @@ import {
   Projects,
   Achievements,
   Contact,
-  Navigation
+  Navigation,
+  ImpactHighlights
 } from '@/components'
 
 export default function Home() {
@@ -30,6 +31,7 @@ export default function Home() {
         <Experience />
         <Skills />
         <Projects />
+        <ImpactHighlights />
         <Achievements />
         <Contact />
       </main>
