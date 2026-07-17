@@ -1,72 +1,142 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Trophy, Users, Zap, Target, Star } from 'lucide-react'
+import { Trophy, Users, Zap, Target, Star, Award, Calendar } from 'lucide-react'
 
 const Achievements = () => {
   const achievements = [
     {
-      title: 'AI Hackathon 2025 Participant',
-      description: 'Participated in AI for UN SDGs hackathon, developing innovative solutions for sustainable development goals.',
+      title: 'IEEE TechX Bits & Bots Hackathon — Winner',
+      description: 'Team BulamuChainBot won the TechX Uganda 2025 Hackathon with an AI-powered rural health assistant combined with blockchain-secured medical records.',
       icon: <Trophy className="text-yellow-400" size={24} />,
       category: 'Competition',
-      year: '2025'
+      year: 'Sep 2025'
     },
     {
-      title: 'PyConUganda 2025 Conference',
-      description: 'Attended PyConUganda conference in August 2025, Kampala - networking with Python developers and learning latest trends.',
-      icon: <Users className="text-blue-400" size={24} />,
-      category: 'Conference',
-      year: '2025'
+      title: 'Blockchain Uganda Hackathon — Winner',
+      description: 'Won the Blockchain 2025 Uganda Hackathon with "Village SACCO" — a decentralized savings solution for rural communities.',
+      icon: <Trophy className="text-yellow-400" size={24} />,
+      category: 'Competition',
+      year: 'Jun 2025'
     },
     {
-      title: 'Blockchain DevFest 2025',
-      description: 'Participated in Blockchain DevFest 2025 in Kampala, Uganda - exploring decentralized technologies and Web3 innovations.',
-      icon: <Zap className="text-purple-400" size={24} />,
-      category: 'Conference',
-      year: '2025'
+      title: 'EthNile Hackathon — Winner',
+      description: 'Godwin Ofwono (UTAMU) won with the MicroCeloLearn Project. UTAMU Innovation Club delegation attended and represented actively.',
+      icon: <Trophy className="text-yellow-400" size={24} />,
+      category: 'Competition',
+      year: 'Oct 2025'
     },
     {
-      title: 'Bitnob Developers Bootcamp & Hackathon',
-      description: 'Attended intensive bootcamp and hackathon in Kampala focusing on fintech solutions and blockchain development.',
-      icon: <Trophy className="text-green-400" size={24} />,
-      category: 'Hackathon',
-      year: '2025'
-    },
-    {
-      title: 'DevOps Meetup - Docker & Kubernetes',
-      description: 'Attended DevOps meetup on August 16th at Uganda ICT Hub Nakawa, learning containerization and orchestration technologies.',
-      icon: <Target className="text-cyan-400" size={24} />,
-      category: 'Meetup',
-      year: '2025'
-    },
-    {
-      title: 'Google Developer Meetups',
-      description: 'Attended Google Developer meetups in 2024 focusing on Flutter development and career guidance in tech.',
-      icon: <Star className="text-orange-400" size={24} />,
-      category: 'Meetup',
-      year: '2024'
+      title: 'AVIATHON — 4th Place',
+      description: 'AeroUTAMU Team placed 4th in the aviation hackathon, narrowly missing 2nd runner-up by one position with an aviation intelligence system.',
+      icon: <Award className="text-orange-400" size={24} />,
+      category: 'Competition',
+      year: 'Oct 2025'
     },
     {
       title: 'IBM Z Datathon 2025',
-      description: 'Scheduled to participate in IBM Z Datathon 2025 in October, focusing on mainframe technologies and data analytics solutions.',
+      description: 'Built AI Legal Translator that converts legal language into simplified speech using AI summarization and translation. Cross-cultural team collaboration with 5 Indian teammates.',
       icon: <Trophy className="text-blue-400" size={24} />,
       category: 'Competition',
-      year: '2025'
+      year: 'Oct 2025'
     },
     {
-      title: 'VibeCoding DApp Workshop',
-      description: 'Attended specialized workshop on Decentralized Application development and blockchain technologies.',
-      icon: <Zap className="text-green-400" size={24} />,
+      title: 'AI FEST Kampala 2026',
+      description: 'Organized UTAMU participation in the premier inter-university AI hackathon in East Africa. 25+ institutions competed to build AI agents solving real-world problems.',
+      icon: <Zap className="text-purple-400" size={24} />,
+      category: 'Hackathon',
+      year: 'May 2026'
+    },
+    {
+      title: 'FOSSA ICT Fest 2026',
+      description: 'Participated in hackathon and coding challenge at IUIU. UTAMU team showcased localized applications and digital solutions.',
+      icon: <Code className="text-green-400" size={24} />,
+      category: 'Hackathon',
+      year: 'May 2026'
+    },
+    {
+      title: 'Zindi UTAMU Hackathons',
+      description: 'Organized and participated in multiple Zindi data science competitions tackling financial inclusion in Africa using ML models.',
+      icon: <Trophy className="text-emerald-400" size={24} />,
+      category: 'Hackathon',
+      year: '2025-2026'
+    },
+    {
+      title: 'Stellar Builders Bootcamp — Kabale',
+      description: 'Intensive 3-day blockchain development bootcamp. 16 active GitHub repositories launched, 100% of projects received 1-on-1 reviews from senior engineers.',
+      icon: <Zap className="text-purple-400" size={24} />,
       category: 'Workshop',
-      year: '2024'
+      year: 'Mar 2026'
     },
     {
-      title: 'SDGs-CAP Cohort 4 Member',
-      description: 'Selected as member of SDGs Capacity Building Program focusing on sustainable development initiatives.',
+      title: 'Data Visualization for AI/ML Workshop',
+      description: 'Hands-on session mastering Matplotlib and Seaborn for data visualization. Sponsored by Zindi and UTAMU.',
       icon: <Target className="text-cyan-400" size={24} />,
+      category: 'Workshop',
+      year: 'Mar 2026'
+    },
+    {
+      title: 'PyCon Uganda 2025',
+      description: 'Attended Uganda\'s premier Python conference — workshops on ML, data engineering, backend development, and open-source collaboration.',
+      icon: <Users className="text-blue-400" size={24} />,
+      category: 'Conference',
+      year: 'Aug 2025'
+    },
+    {
+      title: 'DevFest Kampala 2025',
+      description: 'Google Developer Group flagship event — sessions on Cloud, AI/ML, Flutter, Firebase. Networking with Google Developer Experts worldwide.',
+      icon: <Users className="text-red-400" size={24} />,
+      category: 'Conference',
+      year: 'Oct 2025'
+    },
+    {
+      title: 'BUIDL Africa Conference 2025',
+      description: 'Major gathering for Web3, AI, and digital businesses. Developer workshops, smart contract deployment, and BUIDL Pitch Arena at National ICT Innovation Hub.',
+      icon: <Zap className="text-orange-400" size={24} />,
+      category: 'Conference',
+      year: 'Nov 2025'
+    },
+    {
+      title: 'Droidcon Uganda 2025',
+      description: 'Annual Android developer conference covering Kotlin, Jetpack Compose, mobile app security, and ecosystem updates.',
+      icon: <Users className="text-green-400" size={24} />,
+      category: 'Conference',
+      year: 'Nov 2025'
+    },
+    {
+      title: 'WordCamp Mukono 2026',
+      description: 'WordPress community conference — workshops on Headless CMS, AI integration, Contributor Day, and open-source collaboration.',
+      icon: <Users className="text-blue-400" size={24} />,
+      category: 'Conference',
+      year: 'Mar 2026'
+    },
+    {
+      title: 'Foreign Policy Early Careers Leadership Program',
+      description: 'Selected for FPELP at American Center Kampala — 4-week immersive course on international relations, diplomacy, and U.S.-Uganda foreign policy.',
+      icon: <Star className="text-cyan-400" size={24} />,
       category: 'Program',
-      year: '2024'
+      year: 'May-Jun 2026'
+    },
+    {
+      title: 'Bitnob Workshop & Hackathon',
+      description: 'Hands-on sessions on Lightning wallets, Bitcoin payment flows, and API integration. Built a functional Lightning-based prototype.',
+      icon: <Zap className="text-green-400" size={24} />,
+      category: 'Hackathon',
+      year: 'Jul 2025'
+    },
+    {
+      title: 'Polkadot Conference',
+      description: 'Web3 conference on decentralized governance, parachains, interoperability, and the Polkadot ecosystem.',
+      icon: <Users className="text-purple-400" size={24} />,
+      category: 'Conference',
+      year: 'Oct 2025'
+    },
+    {
+      title: 'Movement Network Launch — Uganda',
+      description: 'Flagship launch gathering builders, innovators, and blockchain enthusiasts creating decentralized systems.',
+      icon: <Zap className="text-cyan-400" size={24} />,
+      category: 'Conference',
+      year: '2025'
     },
     {
       title: 'Aspiring Google Developers Lead',
@@ -89,7 +159,6 @@ const Achievements = () => {
       case 'Competition': return 'from-yellow-500/10 to-orange-500/10 border-yellow-500/20'
       case 'Conference': return 'from-indigo-500/10 to-purple-500/10 border-indigo-500/20'
       case 'Hackathon': return 'from-emerald-500/10 to-green-500/10 border-emerald-500/20'
-      case 'Meetup': return 'from-rose-500/10 to-pink-500/10 border-rose-500/20'
       case 'Workshop': return 'from-green-500/10 to-emerald-500/10 border-green-500/20'
       case 'Program': return 'from-cyan-500/10 to-blue-500/10 border-cyan-500/20'
       case 'Leadership': return 'from-red-500/10 to-orange-500/10 border-red-500/20'
@@ -99,10 +168,10 @@ const Achievements = () => {
   }
 
   const stats = [
-    { label: 'Conferences & Events', value: '8+', icon: <Users className="text-blue-400" size={20} /> },
-    { label: 'Competitions & Hackathons', value: '3+', icon: <Trophy className="text-yellow-400" size={20} /> },
-    { label: 'Workshops & Meetups', value: '4+', icon: <Zap className="text-green-400" size={20} /> },
-    { label: 'Leadership Roles', value: '3+', icon: <Target className="text-purple-400" size={20} /> }
+    { label: 'Events & Conferences', value: '20+', icon: <Calendar className="text-blue-400" size={20} /> },
+    { label: 'Hackathons & Competitions', value: '11+', icon: <Trophy className="text-yellow-400" size={20} /> },
+    { label: 'Awards & Wins', value: '4', icon: <Award className="text-green-400" size={20} /> },
+    { label: 'Leadership Roles', value: '5+', icon: <Target className="text-purple-400" size={20} /> }
   ]
 
   return (
@@ -116,12 +185,11 @@ const Achievements = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-            Achievements & Engagements
+            Achievements & Events
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-blue-400 to-purple-400 mx-auto mb-4"></div>
           <p className="text-gray-300 text-lg max-w-3xl mx-auto">
-            Recognition and active participation in the tech community, 
-            showcasing leadership, learning, and contribution to innovation.
+            Hackathons won, conferences attended, and community impact — representing UTAMU across Uganda&apos;s tech ecosystem.
           </p>
         </motion.div>
 
@@ -157,7 +225,7 @@ const Achievements = () => {
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
+              transition={{ duration: 0.6, delay: index * 0.05 }}
               className={`bg-gradient-to-br ${getCategoryColor(achievement.category)} backdrop-blur-sm rounded-2xl p-6 border hover:border-opacity-60 transition-all duration-300 group`}
               whileHover={{ scale: 1.02, y: -5 }}
             >
@@ -172,7 +240,7 @@ const Achievements = () => {
                     </h3>
                     <div className="flex items-center gap-2 mt-1">
                       <span className="text-purple-400 text-sm">{achievement.category}</span>
-                      <span className="text-gray-500">•</span>
+                      <span className="text-gray-500">·</span>
                       <span className="text-gray-400 text-sm">{achievement.year}</span>
                     </div>
                   </div>
@@ -194,30 +262,30 @@ const Achievements = () => {
           transition={{ duration: 0.8, delay: 0.3 }}
           className="mt-16 bg-gradient-to-br from-slate-800/50 to-purple-900/20 backdrop-blur-sm rounded-2xl p-8 border border-purple-500/20"
         >
-          <h3 className="text-2xl font-semibold text-white mb-6 text-center">Community Impact & Goals</h3>
+          <h3 className="text-2xl font-semibold text-white mb-6 text-center">Impact & Takeaways</h3>
           
           <div className="grid md:grid-cols-2 gap-8">
             <div>
               <h4 className="text-lg font-semibold text-blue-400 mb-4 flex items-center gap-2">
                 <Users className="text-blue-400" size={20} />
-                Recent Engagements (2024-2025)
+                Community Impact
               </h4>
               <ul className="space-y-3">
                 <li className="flex items-center gap-2 text-gray-300">
                   <div className="w-2 h-2 bg-blue-400 rounded-full"></div>
-                  PyConUganda & Blockchain DevFest 2025
+                  Strengthened UTAMU&apos;s visibility in national and regional tech communities
                 </li>
                 <li className="flex items-center gap-2 text-gray-300">
                   <div className="w-2 h-2 bg-purple-400 rounded-full"></div>
-                  Google Developer & DevOps Meetups
+                  Won 4 hackathon awards through team excellence
                 </li>
                 <li className="flex items-center gap-2 text-gray-300">
                   <div className="w-2 h-2 bg-green-400 rounded-full"></div>
-                  Bitnob Bootcamp & AI Hackathons
+                  Expanded professional networks and partnerships
                 </li>
                 <li className="flex items-center gap-2 text-gray-300">
                   <div className="w-2 h-2 bg-yellow-400 rounded-full"></div>
-                  AI Education & Knowledge Sharing
+                  Enhanced UTAMU Innovation Club&apos;s footprint in Uganda&apos;s ecosystem
                 </li>
               </ul>
             </div>
@@ -225,24 +293,24 @@ const Achievements = () => {
             <div>
               <h4 className="text-lg font-semibold text-purple-400 mb-4 flex items-center gap-2">
                 <Target className="text-purple-400" size={20} />
-                Leadership Aspirations
+                Skills Gained
               </h4>
               <ul className="space-y-3">
                 <li className="flex items-center gap-2 text-gray-300">
                   <div className="w-2 h-2 bg-red-400 rounded-full"></div>
-                  Google Developers Lead Uganda
+                  AI, Blockchain, Web3, and Cloud technologies
                 </li>
                 <li className="flex items-center gap-2 text-gray-300">
                   <div className="w-2 h-2 bg-orange-400 rounded-full"></div>
-                  GitHub Campus Expert Program
+                  Aviation systems, fintech, and smart contracts
                 </li>
                 <li className="flex items-center gap-2 text-gray-300">
                   <div className="w-2 h-2 bg-cyan-400 rounded-full"></div>
-                  Tech Community Building
+                  Team collaboration under pressure
                 </li>
                 <li className="flex items-center gap-2 text-gray-300">
                   <div className="w-2 h-2 bg-pink-400 rounded-full"></div>
-                  Innovation Hub Leadership
+                  Data Science, ML, and Python ecosystems
                 </li>
               </ul>
             </div>
@@ -252,5 +320,12 @@ const Achievements = () => {
     </section>
   )
 }
+
+const Code = ({ className, size }: { className?: string; size?: number }) => (
+  <svg className={className} width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <polyline points="16 18 22 12 16 6"></polyline>
+    <polyline points="8 6 2 12 8 18"></polyline>
+  </svg>
+)
 
 export default Achievements

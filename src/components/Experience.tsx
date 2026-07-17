@@ -1,33 +1,97 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Briefcase, BarChart3, MapPin } from 'lucide-react'
+import { Briefcase, BarChart3, MapPin, GraduationCap, Users, Globe, Rocket, Code, Trophy } from 'lucide-react'
 
 const Experience = () => {
   const experiences = [
     {
+      role: 'Ambassador',
+      company: 'Stellar East African Community',
+      period: 'Nov 2025 - Present',
+      icon: <Globe className="text-purple-400" size={24} />,
+      description: 'Represent the Stellar ecosystem in Kampala, driving awareness, education, and innovation around blockchain-based financial solutions. Led onboarding of new cohort participants, facilitated weekly learning sessions and technical workshops, and supported teams in building blockchain-driven financial inclusion solutions.',
+      skills: ['Blockchain', 'Stellar', 'Community Leadership', 'Technical Mentorship']
+    },
+    {
+      role: 'Minister of Education',
+      company: 'UTAMU (Guild Government)',
+      period: 'Sep 2025 - Present',
+      icon: <GraduationCap className="text-blue-400" size={24} />,
+      description: 'Responsible for academic welfare of students, coordinating career guidance and counseling, cultivating innovation and research culture, and organizing educational programs across the university.',
+      skills: ['Leadership', 'Student Welfare', 'Event Planning', 'Academic Advocacy']
+    },
+    {
+      role: 'GDG Co-Lead',
+      company: 'GDG on Campus UTAMU',
+      period: 'Aug 2025 - Present',
+      icon: <Rocket className="text-red-400" size={24} />,
+      description: 'Set vision and roadmap for GDG UTAMU, giving students access to structured learning paths (AI, Cloud, Mobile Development), mentorship programs, and projects aligned with real-world industry needs. Organize workshops, hackathons, speaker sessions, and Google Study Jams.',
+      skills: ['GDG Leadership', 'Event Management', 'Mentorship', 'Google Technologies']
+    },
+    {
+      role: 'Membership Coordinator',
+      company: 'UTAMU Innovation Club',
+      period: 'Mar 2025 - Present',
+      icon: <Users className="text-green-400" size={24} />,
+      description: 'Enrolling and verifying new members to UTAMU Innovation Hub. Active participation in the club\'s weekly meetups and coordination of club activities.',
+      skills: ['Community Building', 'Team Coordination', 'Communication']
+    },
+    {
+      role: 'Campus Ambassador',
+      company: 'GDG on Campus - Makerere University',
+      period: 'Feb 2026 - May 2026',
+      icon: <Users className="text-orange-400" size={24} />,
+      description: 'Outreach of AI FEST Uganda 2026 to UTAMU, promoting awareness of the 17 SDGs, and representing UTAMU on a national level. Encouraged students to apply for AI FEST Uganda 2026, an Inter-University Hackathon.',
+      skills: ['AI Outreach', 'SDG Advocacy', 'Cross-University Collaboration']
+    },
+    {
+      role: 'Fullstack Development Student',
+      company: 'Refactory Academy',
+      period: 'Dec 2025 - Mar 2026',
+      icon: <Code className="text-cyan-400" size={24} />,
+      description: 'Completed certificate in Software Engineering (JavaScript). Learned HTML, CSS, JavaScript, Vue.js, Node.js, Express.js, and MongoDB. Deployed backend on Render and frontend on Vercel. Built a fullstack Grocery Project.',
+      skills: ['MEVN Stack', 'Deployment', 'Git', 'System Design', 'Agile']
+    },
+    {
+      role: 'Campus Ambassador',
+      company: 'Aerobuddies Uganda',
+      period: 'Sep 2025 - Jan 2026',
+      icon: <Rocket className="text-yellow-400" size={24} />,
+      description: 'Advertised the Aerobuddies Uganda Aviathon (hackathon) across tech communities. Mobilized UTAMU students to participate in AVIATHON 2025, a hackathon for sustainability and innovation in aviation.',
+      skills: ['Event Promotion', 'Student Mobilization', 'Aviation Tech']
+    },
+    {
+      role: 'Campus Ambassador',
+      company: 'IEEE Computer Society SYP TechX',
+      period: 'Aug 2025 - Jan 2026',
+      icon: <Trophy className="text-blue-400" size={24} />,
+      description: 'Shared official TechX timeline, invited students to register, promoted the Bits and Bots Hackathon, and reached out to potential sponsors and partners.',
+      skills: ['Hackathon Promotion', 'Partnership Outreach', 'Community Engagement']
+    },
+    {
+      role: 'Campus Ambassador',
+      company: 'IBM',
+      period: 'Sep 2025 - Nov 2025',
+      icon: <Globe className="text-blue-500" size={24} />,
+      description: 'Promoted the IBM Z Datathon at UTAMU, drove registrations by engaging with peers, and volunteered with Shooting Stars Foundation for on-campus events.',
+      skills: ['IBM Z Technologies', 'Event Promotion', 'Volunteering']
+    },
+    {
       role: 'Data Analyst Intern',
-      company: 'Otic Technologies (Otic Foundation)',
-      period: 'June - July 2025',
+      company: 'Otic Group',
+      period: 'Jun 2025 - Aug 2025',
       icon: <BarChart3 className="text-blue-400" size={24} />,
-      description: 'Analyzed complex datasets, developed data visualizations, and provided insights for foundation operations and impact assessment.',
-      skills: ['Data Analysis', 'Python', 'Power BI', 'Statistical Modeling']
+      description: 'Served as internees\' coordinator, scheduling meetups and contributing to team projects. Collaborated on data analysis projects using Pandas, Scikit-Learn, Power BI, and automation.',
+      skills: ['Data Analysis', 'Python', 'Power BI', 'Automation']
     },
     {
       role: 'Enumerator & Census Mapper',
       company: 'Uganda Bureau of Statistics (UBOS)',
-      period: 'February 2024',
+      period: 'Feb 2024 - May 2024',
       icon: <MapPin className="text-green-400" size={24} />,
-      description: 'Conducted field data collection, mapping exercises, and census operations. Ensured data accuracy and quality control.',
+      description: 'Conducted field data collection, mapping exercises, and census operations for the National Housing and Population Census. Ensured data accuracy and quality control.',
       skills: ['Data Collection', 'Field Research', 'Mapping', 'Quality Assurance']
-    },
-    {
-      role: 'Census Enumerator',
-      company: 'Uganda Bureau of Statistics (UBOS) - National Housing and Population Census',
-      period: 'May 2024',
-      icon: <Briefcase className="text-blue-400" size={24} />,
-      description: 'Participated in the National Housing and Population Census, conducting household interviews and data collection. Ensured accurate population and housing data collection.',
-      skills: ['Census Operations', 'Household Surveys', 'Data Collection', 'Population Research']
     }
   ]
 
@@ -42,7 +106,7 @@ const Experience = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-            Work & Internship Experience
+            Experience & Leadership
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-blue-400 to-purple-400 mx-auto"></div>
         </motion.div>
@@ -54,7 +118,7 @@ const Experience = () => {
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: index * 0.2 }}
+              transition={{ duration: 0.6, delay: index * 0.1 }}
               className="bg-gradient-to-br from-slate-800/50 to-purple-900/20 backdrop-blur-sm rounded-2xl p-8 border border-purple-500/20 hover:border-purple-400/40 transition-all duration-300"
               whileHover={{ scale: 1.02 }}
             >
@@ -110,18 +174,22 @@ const Experience = () => {
           className="mt-12 bg-gradient-to-br from-slate-800/50 to-purple-900/20 backdrop-blur-sm rounded-2xl p-8 border border-purple-500/20"
         >
           <h3 className="text-2xl font-semibold text-white mb-6 text-center">Experience Highlights</h3>
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-4 gap-6">
             <div className="text-center">
-              <div className="text-3xl font-bold text-blue-400 mb-2">3+</div>
-              <p className="text-gray-300">Organizations</p>
+              <div className="text-3xl font-bold text-blue-400 mb-2">10+</div>
+              <p className="text-gray-300">Roles & Organizations</p>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-purple-400 mb-2">Data</div>
-              <p className="text-gray-300">Analysis Focus</p>
+              <div className="text-3xl font-bold text-purple-400 mb-2">6+</div>
+              <p className="text-gray-300">Campus Ambassadorships</p>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-cyan-400 mb-2">Field</div>
-              <p className="text-gray-300">Research Experience</p>
+              <div className="text-3xl font-bold text-cyan-400 mb-2">3</div>
+              <p className="text-gray-300">Leadership Positions</p>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl font-bold text-green-400 mb-2">1</div>
+              <p className="text-gray-300">Internship</p>
             </div>
           </div>
         </motion.div>
