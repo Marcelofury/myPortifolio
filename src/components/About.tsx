@@ -42,8 +42,7 @@ const About = () => {
               </div>
               <p className="text-gray-300 leading-relaxed group-hover:text-gray-200 transition-colors duration-300">
                 Detail-oriented <span className="text-blue-400 font-semibold">Software Engineering</span> student with over 
-                2 years of hands-on experience in <span className="text-cyan-400 font-semibold">full-stack web development</span>, 
-                <span className="text-green-400 font-semibold"> data validation</span>, and 
+                2 years of hands-on experience in <span className="text-cyan-400 font-semibold">full-stack web development</span>, and 
                 <span className="text-purple-400 font-semibold"> API integration</span>. Strong technical foundation in 
                 testing web and mobile applications, executing regression tests, and verifying data integrity. 
                 Adept at using Postman for JSON-based API validation and writing SQL/database queries.
@@ -104,11 +103,11 @@ const About = () => {
                 </li>
                 <li className="flex items-center gap-3 text-gray-300">
                   <div className="w-2 h-2 bg-blue-400 rounded-full"></div>
-                  Interested in <span className="text-blue-400 font-semibold">FullStack & Backend</span>
+                  Interested in <span className="text-blue-400 font-semibold">Testing ,FullStack & Backend</span>
                 </li>
                 <li className="flex items-center gap-3 text-gray-300">
                   <div className="w-2 h-2 bg-cyan-400 rounded-full"></div>
-                  Currently learning: <span className="text-cyan-400 font-semibold">Java</span>
+                  Currently learning: <span className="text-cyan-400 font-semibold">Java & ISTQB</span>
                 </li>
                 <li className="flex items-center gap-3 text-gray-300">
                   <div className="w-2 h-2 bg-green-400 rounded-full"></div>
@@ -128,7 +127,7 @@ const About = () => {
               <ul className="space-y-3">
                 <li className="flex items-center gap-3 text-gray-300">
                   <div className="w-2 h-2 bg-cyan-400 rounded-full"></div>
-                  Work in global tech & space-related organizations
+                  Work in global tech 
                 </li>
                 <li className="flex items-center gap-3 text-gray-300">
                   <div className="w-2 h-2 bg-purple-400 rounded-full"></div>
