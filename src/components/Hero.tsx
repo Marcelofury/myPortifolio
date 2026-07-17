@@ -51,7 +51,7 @@ const Hero = () => {
     { icon: <Briefcase size={20} />, label: 'Experience', value: '2+ Years' },
     { icon: <Code size={20} />, label: 'Projects', value: '60+ Repos' },
     { icon: <Award size={20} />, label: 'Technologies', value: '15+' },
-    { icon: <Zap size={20} />, label: 'Impact', value: '500+ Users' }
+    { icon: <Zap size={20} />, label: 'Impact', value: '10+ Users' }
   ]
 
   return (
