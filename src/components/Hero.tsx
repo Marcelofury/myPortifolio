@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion'
 import { ChevronDown, Download, Briefcase, Code, Award, Users } from 'lucide-react'
 import Image from 'next/image'
+import { useEffect, useState } from 'react'
 
 const Hero = () => {
   const quickStats = [
@@ -14,7 +15,6 @@ const Hero = () => {
 
   return (
     <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
-      {/* Hero background effects */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute -top-40 -right-40 w-80 h-80 bg-purple-500/20 rounded-full blur-3xl"></div>
         <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-blue-500/20 rounded-full blur-3xl"></div>
@@ -35,8 +35,11 @@ const Hero = () => {
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
+              <span className="text-gray-200 drop-shadow-lg">
+                Hi, I&apos;m{' '}
+              </span>
               <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent drop-shadow-lg">
-                Marcel Butera
+                BUTERA Marcel
               </span>
             </motion.h1>
             
@@ -46,19 +49,27 @@ const Hero = () => {
               animate={{ opacity: 1 }}
               transition={{ duration: 0.8, delay: 0.4 }}
             >
-              <p className="text-xl md:text-2xl text-gray-300 font-medium">
-                Software Engineer | Data Analyst | AI Enthusiast
-              </p>
+              {/* Typing Animation */}
+              <div className="h-16 flex items-center justify-center lg:justify-start">
+                <div className="text-2xl md:text-3xl font-bold">
+                  <span className="bg-gradient-to-r from-yellow-400 via-orange-400 to-red-400 bg-clip-text text-transparent">
+                    {typingText}
+                  </span>
+                  <span className="animate-pulse text-purple-400">|</span>
+                </div>
+              </div>
               
               <p className="text-lg md:text-xl text-gray-400 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
-                Passionate about building innovative solutions in Software Engineering, 
-                Data Analytics, Artificial Intelligence, and Space Technology. 
-                <span className="text-yellow-400 font-semibold block mt-2"> Dream: To work at SpaceX, NASA, or ESA.</span>
+                Detail-oriented Software Engineering student with over 2 years of hands-on experience 
+                in full-stack web development, data validation, and API integration. 
+                <span className="text-cyan-400 font-semibold block mt-2">
+                  Focused on building impactful solutions through quality code.
+                </span>
               </p>
             </motion.div>
             
             <motion.div
-              className="flex flex-col sm:flex-row gap-6 justify-center lg:justify-start items-center pt-8"
+              className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start items-center pt-8"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.8 }}
@@ -94,7 +105,7 @@ const Hero = () => {
               >
                 <span className="flex items-center gap-2">
                   View Projects
-                  <span className="group-hover:translate-x-1 transition-transform duration-200">⚡</span>
+                  <span className="group-hover:translate-x-1 transition-transform duration-200">&rarr;</span>
                 </span>
               </motion.a>
             </motion.div>
@@ -131,13 +142,11 @@ const Hero = () => {
             className="flex justify-center lg:justify-end"
           >
             <div className="relative">
-              {/* Floating animation wrapper */}
               <motion.div
                 animate={{ y: [0, -10, 0] }}
                 transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
                 className="w-72 h-72 md:w-80 md:h-80"
               >
-                {/* Gradient border */}
                 <div className="w-full h-full rounded-2xl bg-gradient-to-br from-blue-400 via-purple-500 to-cyan-400 p-1 shadow-2xl">
                   <div className="w-full h-full rounded-2xl overflow-hidden bg-slate-900">
                     <Image
@@ -152,7 +161,7 @@ const Hero = () => {
                         target.style.display = 'none';
                         const parent = target.parentElement;
                         if (parent) {
-                          parent.innerHTML = '<div class="w-full h-full flex items-center justify-center bg-gradient-to-br from-slate-800 to-slate-900"><span class="text-6xl">🚀</span></div>';
+                          parent.innerHTML = '<div class="w-full h-full flex items-center justify-center bg-gradient-to-br from-slate-800 to-slate-900"><span class="text-6xl font-bold text-purple-400">MB</span></div>';
                         }
                       }}
                     />
@@ -160,7 +169,6 @@ const Hero = () => {
                 </div>
               </motion.div>
               
-              {/* Decorative elements */}
               <div className="absolute -top-4 -right-4 w-8 h-8 bg-yellow-400 rounded-full animate-pulse"></div>
               <div className="absolute -bottom-6 -left-6 w-6 h-6 bg-cyan-400 rounded-full animate-pulse delay-500"></div>
               <div className="absolute top-1/2 -left-8 w-4 h-4 bg-purple-400 rounded-full animate-bounce delay-1000"></div>

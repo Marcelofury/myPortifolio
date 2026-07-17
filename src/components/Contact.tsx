@@ -350,7 +350,7 @@ const Contact = () => {
             © 2025 Marcel Butera. Built with Next.js, Tailwind CSS, and Framer Motion.
           </p>
           <p className="text-gray-500 text-sm mt-2">
-            Ready to join SpaceX, NASA, or ESA 🚀
+            Ready to join SpaceX, NASA, or ESA
           </p>
         </motion.div>
       </div>

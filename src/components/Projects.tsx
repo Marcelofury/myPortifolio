@@ -29,7 +29,7 @@ const Projects = () => {
   const projects: Project[] = [
     {
       title: 'MoodMelody Music Recommender',
-      description: 'AI-powered music recommendation system that analyzes user mood and preferences to suggest personalized playlists using machine learning algorithms.',
+      description: 'AI-powered music recommendation system that analyzes user mood and preferences to suggest personalized playlists.',
       technologies: ['TypeScript', 'Machine Learning', 'AI', 'React'],
       icon: <Music className="text-pink-400" size={24} />,
       category: 'AI/ML',
@@ -78,9 +78,9 @@ const Projects = () => {
     {
       title: 'Paris Travel Guide Chatbot',
       description: 'Intelligent travel guide chatbot for Paris with comprehensive travel information and recommendations using AI.',
-      technologies: ['Python', 'AI', 'Chatbot', 'Natural Language Processing'],
+      technologies: ['Python', 'AI', 'Chatbot', 'NLP'],
       icon: <Bot className="text-blue-400" size={24} />,
-      category: 'AI/Web',
+      category: 'AI/ML',
       status: 'Completed',
       github: 'https://github.com/Marcelofury/parisTravelGuideChatbot',
       demo: null,
@@ -94,8 +94,8 @@ const Projects = () => {
     {
       title: 'PDF Reader & Text Extractor',
       description: 'Python tool for extracting text content from PDF documents with a straightforward approach to document processing.',
-      technologies: ['Python', 'PDF Processing', 'Text Extraction', 'Document Analysis'],
-      icon: <Eye className="text-green-400" size={24} />,
+      technologies: ['Python', 'PDF Processing', 'Text Extraction'],
+      icon: <Eye className="text-orange-400" size={24} />,
       category: 'Utility',
       status: 'Completed',
       github: 'https://github.com/Marcelofury/pdfReader',
@@ -207,12 +207,8 @@ const Projects = () => {
   const getCategoryColor = (category: string) => {
     switch (category) {
       case 'AI/ML': return 'from-purple-500/10 to-pink-500/10 border-purple-500/20'
-      case 'AI/Web': return 'from-blue-500/10 to-purple-500/10 border-blue-500/20'
       case 'Web Development': return 'from-cyan-500/10 to-blue-500/10 border-cyan-500/20'
-      case 'Education': return 'from-green-500/10 to-emerald-500/10 border-green-500/20'
       case 'Utility': return 'from-orange-500/10 to-red-500/10 border-orange-500/20'
-      case 'Space Tech': return 'from-indigo-500/10 to-purple-500/10 border-indigo-500/20'
-      case 'Programming': return 'from-green-500/10 to-emerald-500/10 border-green-500/20'
       default: return 'from-gray-500/10 to-slate-500/10 border-gray-500/20'
     }
   }
@@ -389,7 +385,7 @@ const Projects = () => {
           <h3 className="text-2xl font-semibold text-white mb-8 text-center">Project Overview</h3>
           <div className="grid md:grid-cols-4 gap-6">
             <div className="text-center">
-              <div className="text-3xl font-bold text-blue-400 mb-2">8+</div>
+              <div className="text-3xl font-bold text-blue-400 mb-2">6+</div>
               <p className="text-gray-300">Featured Projects</p>
             </div>
             <div className="text-center">
@@ -401,8 +397,8 @@ const Projects = () => {
               <p className="text-gray-300">Programming Languages</p>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-yellow-400 mb-2">2</div>
-              <p className="text-gray-300">Active Development</p>
+              <div className="text-3xl font-bold text-yellow-400 mb-2">3</div>
+              <p className="text-gray-300">High Impact</p>
             </div>
           </div>
         </motion.div>

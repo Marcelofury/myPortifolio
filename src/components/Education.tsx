@@ -1,27 +1,53 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { GraduationCap, BookOpen, Users } from 'lucide-react'
+import { GraduationCap, BookOpen, Award } from 'lucide-react'
 
 const Education = () => {
-  const courses = [
-    'Structured Programming (C, Python, JavaScript)',
-    'Computer Systems Architecture',
-    'Software Architecture & Patterns',
-    'Operating Systems',
-    'Data Analytics'
-  ]
-
-  const roles = [
+  const education = [
     {
-      title: 'Membership Coordinator',
-      organization: 'UTAMU Innovation Hub',
-      icon: <Users className="text-blue-400" size={20} />
+      degree: 'BSc in Software Engineering',
+      institution: 'Universal Technology and Management University (UTAMU)',
+      period: '2024 - 2028',
+      location: 'Kampala, Uganda',
+      courses: [
+        'Structured Programming (C, Python, JavaScript)',
+        'Computer Systems Architecture',
+        'Software Architecture & Patterns',
+        'Operating Systems',
+        'Data Analytics'
+      ]
     },
     {
-      title: 'Class Coordinator',
-      organization: 'Internship Peers',
-      icon: <BookOpen className="text-purple-400" size={20} />
+      degree: 'Certificate in Software Engineering (JavaScript)',
+      institution: 'Refactory Academy',
+      period: 'Dec 2025 - Mar 2026',
+      location: 'Kampala, Uganda',
+      courses: [
+        'HTML, CSS, JavaScript',
+        'Vue.js, Node.js, Express.js',
+        'MongoDB',
+        'Deployment (Render, Vercel)',
+        'Git & GitHub'
+      ]
+    }
+  ]
+
+  const certifications = [
+    {
+      title: 'Software Engineering in JavaScript',
+      issuer: 'Refactory Academy',
+      date: 'Jun 2026'
+    },
+    {
+      title: 'Power BI Certification',
+      issuer: 'Otic Group',
+      date: 'Jul 2025'
+    },
+    {
+      title: 'IBM Z Hackathon 2025',
+      issuer: 'IBM',
+      date: 'Oct 2025'
     }
   ]
 
@@ -42,41 +68,47 @@ const Education = () => {
         </motion.div>
 
         <div className="grid lg:grid-cols-2 gap-8">
-          {/* Main Education */}
-          <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-            className="bg-gradient-to-br from-slate-800/50 to-purple-900/20 backdrop-blur-sm rounded-2xl p-8 border border-purple-500/20"
-          >
-            <div className="flex items-center gap-3 mb-6">
-              <GraduationCap className="text-blue-400" size={32} />
-              <div>
-                <h3 className="text-2xl font-semibold text-white">BSc in Software Engineering</h3>
-                <p className="text-blue-400">Uganda Technology and Management University (UTAMU)</p>
-              </div>
-            </div>
+          {/* Education Cards */}
+          <div className="space-y-6">
+            {education.map((edu, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, x: -50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8, delay: index * 0.2 }}
+                className="bg-gradient-to-br from-slate-800/50 to-purple-900/20 backdrop-blur-sm rounded-2xl p-8 border border-purple-500/20"
+              >
+                <div className="flex items-center gap-3 mb-6">
+                  <GraduationCap className="text-blue-400" size={32} />
+                  <div>
+                    <h3 className="text-2xl font-semibold text-white">{edu.degree}</h3>
+                    <p className="text-blue-400">{edu.institution}</p>
+                    <p className="text-gray-400 text-sm">{edu.period} | {edu.location}</p>
+                  </div>
+                </div>
 
-            <div className="space-y-4">
-              <h4 className="text-lg font-semibold text-purple-400 mb-3">Core Courses</h4>
-              {courses.map((course, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="flex items-center gap-3 p-3 bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-lg border border-blue-500/20"
-                >
-                  <div className="w-2 h-2 bg-gradient-to-r from-blue-400 to-purple-400 rounded-full"></div>
-                  <span className="text-gray-300">{course}</span>
-                </motion.div>
-              ))}
-            </div>
-          </motion.div>
+                <div className="space-y-3">
+                  <h4 className="text-lg font-semibold text-purple-400 mb-3">Core Courses</h4>
+                  {edu.courses.map((course, idx) => (
+                    <motion.div
+                      key={idx}
+                      initial={{ opacity: 0, x: -20 }}
+                      whileInView={{ opacity: 1, x: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.5, delay: idx * 0.1 }}
+                      className="flex items-center gap-3 p-3 bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-lg border border-blue-500/20"
+                    >
+                      <div className="w-2 h-2 bg-gradient-to-r from-blue-400 to-purple-400 rounded-full"></div>
+                      <span className="text-gray-300">{course}</span>
+                    </motion.div>
+                  ))}
+                </div>
+              </motion.div>
+            ))}
+          </div>
 
-          {/* Leadership Roles */}
+          {/* Certifications */}
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -84,9 +116,12 @@ const Education = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="space-y-6"
           >
-            <h3 className="text-2xl font-semibold text-white mb-6">Leadership Roles</h3>
+            <h3 className="text-2xl font-semibold text-white mb-6 flex items-center gap-2">
+              <Award className="text-yellow-400" size={24} />
+              Certifications
+            </h3>
             
-            {roles.map((role, index) => (
+            {certifications.map((cert, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -97,10 +132,11 @@ const Education = () => {
                 whileHover={{ scale: 1.02 }}
               >
                 <div className="flex items-center gap-3 mb-3">
-                  {role.icon}
-                  <h4 className="text-xl font-semibold text-white">{role.title}</h4>
+                  <Award className="text-yellow-400" size={20} />
+                  <h4 className="text-xl font-semibold text-white">{cert.title}</h4>
                 </div>
-                <p className="text-gray-300">{role.organization}</p>
+                <p className="text-gray-300">{cert.issuer}</p>
+                <p className="text-gray-400 text-sm mt-1">{cert.date}</p>
               </motion.div>
             ))}
 
