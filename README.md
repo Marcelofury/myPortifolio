@@ -21,7 +21,7 @@ Junior Software Tester | QA Engineer | Software Engineering Student | Full Stack
 - I'm a **Software Engineering** student at UTAMU and a **Fullstack Web Developer (MEVN STACK)**, Backend developer in Node/Express.js and Java.
 I enjoy building practical solutions, learning deeply, and contributing to meaningful projects.
 - I'm also a **Junior Software Tester** and my main goal is to find **defects** in systems, make test scenarios and test cases, bug reports using tools like **Postman, Bruno, JIRA and SQL queries in the database**.
-- Software Engineering Student at **UTAMU** (Uganda Technology and Management University)
+- Software Engineering Student at **UTAMU** (Universal Technology and Management University)
 - Interested in FullStack & Backend
 - Currently learning: **Java**, **ISTQB** (International Software Testing Qualifications Board) Certification for Testers
 - Career goal: Work in global tech & space-related organizations
