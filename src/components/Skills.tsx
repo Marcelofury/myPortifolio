@@ -6,18 +6,25 @@ import { Code, Database, Brain, Globe, Terminal, Wrench, Bug, Users } from 'luci
 const Skills = () => {
   const skillCategories = [
     {
-      title: 'QA & Testing',
+      title: 'Software Testing & QA',
       icon: <Bug className="text-red-400" size={24} />,
-      skills: ['STLC', 'Functional Testing', 'Integration Testing', 'Regression Testing (TNR)', 'Test Case Design', 'Defect Logging'],
+      skills: ['Software Testing (ISTQB)', 'STLC', 'Functional Testing', 'Integration Testing', 'Regression Testing (TNR)', 'Test Case Design', 'Defect Logging'],
       color: 'from-red-500/20 to-pink-600/20',
       borderColor: 'border-red-500/30'
     },
     {
-      title: 'API & Data Validation',
+      title: 'API Testing & Validation',
       icon: <Globe className="text-blue-400" size={24} />,
-      skills: ['Postman', 'JSON', 'XML', 'REST APIs', 'Git/GitHub'],
+      skills: ['Postman', 'JSON', 'XML', 'REST APIs', 'API Integration Testing'],
       color: 'from-blue-500/20 to-cyan-600/20',
       borderColor: 'border-blue-500/30'
+    },
+    {
+      title: 'Project Management & Tools',
+      icon: <Wrench className="text-orange-400" size={24} />,
+      skills: ['JIRA', 'Git/GitHub', 'Agile/Scrum', 'Power BI'],
+      color: 'from-orange-500/20 to-amber-600/20',
+      borderColor: 'border-orange-500/30'
     },
     {
       title: 'Databases & Querying',
@@ -29,16 +36,9 @@ const Skills = () => {
     {
       title: 'Development',
       icon: <Code className="text-purple-400" size={24} />,
-      skills: ['JavaScript (Vue.js, Node.js, Express.js)', 'Python (Pandas, Automation)', 'Flutter/Dart'],
+      skills: ['JavaScript (Vue.js, Node.js, Express.js)', 'Java', 'Python (Pandas, Automation)', 'Flutter/Dart'],
       color: 'from-purple-500/20 to-violet-600/20',
       borderColor: 'border-purple-500/30'
-    },
-    {
-      title: 'Methodologies & Tools',
-      icon: <Wrench className="text-orange-400" size={24} />,
-      skills: ['Agile/Scrum', 'JIRA', 'Power BI'],
-      color: 'from-orange-500/20 to-amber-600/20',
-      borderColor: 'border-orange-500/30'
     },
     {
       title: 'Soft Skills',
@@ -50,12 +50,14 @@ const Skills = () => {
   ]
 
   const proficiencyLevels = [
-    { skill: 'Python', level: 90, years: '2+', proficiency: 'Expert', color: 'bg-blue-500' },
-    { skill: 'JavaScript', level: 85, years: '2+', proficiency: 'Advanced', color: 'bg-yellow-500' },
+    { skill: 'Software Testing & QA', level: 85, years: '1+', proficiency: 'Advanced', color: 'bg-red-500' },
+    { skill: 'Postman & API Testing', level: 80, years: '1+', proficiency: 'Advanced', color: 'bg-blue-500' },
+    { skill: 'SQL & Database Management', level: 78, years: '1+', proficiency: 'Intermediate', color: 'bg-green-500' },
+    { skill: 'JIRA & Project Management', level: 75, years: '1+', proficiency: 'Intermediate', color: 'bg-orange-500' },
+    { skill: 'JavaScript (MEVN Stack)', level: 82, years: '2+', proficiency: 'Advanced', color: 'bg-yellow-500' },
+    { skill: 'Python (Data Analysis & Automation)', level: 88, years: '2+', proficiency: 'Expert', color: 'bg-purple-500' },
     { skill: 'C Programming', level: 80, years: '2+', proficiency: 'Advanced', color: 'bg-gray-500' },
-    { skill: 'Data Analysis', level: 88, years: '2+', proficiency: 'Expert', color: 'bg-green-500' },
-    { skill: 'AI/ML', level: 82, years: '1+', proficiency: 'Advanced', color: 'bg-purple-500' },
-    { skill: 'React/Next.js', level: 75, years: '1+', proficiency: 'Intermediate', color: 'bg-cyan-500' }
+    { skill: 'Flutter/Dart', level: 70, years: '1+', proficiency: 'Intermediate', color: 'bg-cyan-500' }
   ]
 
   return (
@@ -171,19 +173,23 @@ const Skills = () => {
           <h3 className="text-2xl font-semibold text-white mb-6 text-center">Currently Learning & Goals</h3>
           <div className="grid md:grid-cols-2 gap-6">
             <div>
-              <h4 className="text-lg font-semibold text-purple-400 mb-3">Advancing Skills</h4>
+              <h4 className="text-lg font-semibold text-purple-400 mb-3">Currently Learning</h4>
               <ul className="space-y-2">
                 <li className="flex items-center gap-2 text-gray-300">
                   <div className="w-2 h-2 bg-purple-400 rounded-full"></div>
-                  MERN Stack Development
+                  Software Engineering with JavaScript and Java
                 </li>
                 <li className="flex items-center gap-2 text-gray-300">
                   <div className="w-2 h-2 bg-blue-400 rounded-full"></div>
-                  Advanced AI System Building
+                  Data Structures & Algorithms
                 </li>
                 <li className="flex items-center gap-2 text-gray-300">
                   <div className="w-2 h-2 bg-green-400 rounded-full"></div>
-                  Java Programming
+                  Software Testing (ISTQB Certification)
+                </li>
+                <li className="flex items-center gap-2 text-gray-300">
+                  <div className="w-2 h-2 bg-yellow-400 rounded-full"></div>
+                  Fullstack Development (MEVN Stack)
                 </li>
               </ul>
             </div>
@@ -192,11 +198,11 @@ const Skills = () => {
               <ul className="space-y-2">
                 <li className="flex items-center gap-2 text-gray-300">
                   <div className="w-2 h-2 bg-cyan-400 rounded-full"></div>
-                  ISTQB Certification
+                  Advanced QA Automation
                 </li>
                 <li className="flex items-center gap-2 text-gray-300">
                   <div className="w-2 h-2 bg-orange-400 rounded-full"></div>
-                  Financial Engineering
+                  Cloud Infrastructure Testing
                 </li>
                 <li className="flex items-center gap-2 text-gray-300">
                   <div className="w-2 h-2 bg-pink-400 rounded-full"></div>
