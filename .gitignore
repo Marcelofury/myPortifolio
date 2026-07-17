@@ -51,7 +51,6 @@ yarn-error.log*
 next-env.d.ts
 
 # Portfolio specific
-/public/resume.pdf
 /docs/
 *.zip
 *.tar.gz
