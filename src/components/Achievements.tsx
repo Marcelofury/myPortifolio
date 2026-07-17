@@ -13,21 +13,14 @@ const Achievements = () => {
       year: 'Sep 2025',
       impact: 'Won first place with a healthcare AI solution'
     },
+    
     {
-      title: 'Blockchain Uganda Hackathon — Winner',
-      description: 'Won the Blockchain 2025 Uganda Hackathon with "Village SACCO" — a decentralized savings solution for rural communities.',
-      icon: <Trophy className="text-yellow-400" size={24} />,
-      category: 'Competition',
-      year: 'Jun 2025',
-      impact: 'Built financial inclusion tool for rural areas'
-    },
-    {
-      title: 'EthNile Hackathon — Winner',
-      description: 'Godwin Ofwono (UTAMU) won with the MicroCeloLearn Project. UTAMU Innovation Club delegation attended and represented actively.',
+      title: 'EthNile Hackathon ',
+      description: 'Participated in the EthNile hackthon where I built a web3 solution for real world problems',
       icon: <Trophy className="text-yellow-400" size={24} />,
       category: 'Competition',
       year: 'Oct 2025',
-      impact: 'UTAMU team won blockchain education hackathon'
+      impact: 'Knowledge and Opportunities of Blockchain Networks.'
     },
     {
       title: 'AVIATHON — 4th Place',
@@ -63,7 +56,7 @@ const Achievements = () => {
     },
     {
       title: 'Zindi UTAMU Hackathons',
-      description: 'Organized and participated in multiple Zindi data science competitions tackling financial inclusion in Africa using ML models.',
+      description: 'Co-organized and participated in multiple Zindi data science competitions tackling financial inclusion in Africa using ML models.',
       icon: <Trophy className="text-emerald-400" size={24} />,
       category: 'Hackathon',
       year: '2025-2026',
@@ -156,23 +149,8 @@ const Achievements = () => {
       category: 'Conference',
       year: '2025',
       impact: 'Blockchain builders community'
-    },
-    {
-      title: 'Aspiring Google Developers Lead',
-      description: 'Working towards becoming a Google Developers Lead to organize community events and foster tech innovation in Uganda.',
-      icon: <Star className="text-red-400" size={24} />,
-      category: 'Leadership',
-      year: 'Ongoing',
-      impact: 'Community leadership aspiration'
-    },
-    {
-      title: 'Aspiring GitHub Campus Expert',
-      description: 'Working towards becoming a GitHub Campus Expert to lead tech community initiatives and open source contributions.',
-      icon: <Star className="text-orange-400" size={24} />,
-      category: 'Community',
-      year: 'Ongoing',
-      impact: 'Open source leadership goal'
     }
+    
   ]
 
   const getCategoryColor = (category: string) => {
