@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { MapPin, User, Target, Code, Bug, GraduationCap, Briefcase } from 'lucide-react'
+import { MapPin, User, Target, Code, Bug, GraduationCap } from 'lucide-react'
 
 const About = () => {
   return (
@@ -32,20 +32,21 @@ const About = () => {
             transition={{ duration: 0.8 }}
             className="space-y-8"
           >
-            {/* Who I Am */}
+            {/* Profile Summary */}
             <div className="glass-effect rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
               <div className="flex items-center gap-4 mb-6">
                 <div className="p-3 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-xl border border-blue-500/30 group-hover:border-blue-400/50 transition-all duration-300">
                   <User className="text-blue-400" size={24} />
                 </div>
-                <h3 className="text-2xl font-semibold text-white">Who I Am</h3>
+                <h3 className="text-2xl font-semibold text-white">Profile Summary</h3>
               </div>
               <p className="text-gray-300 leading-relaxed group-hover:text-gray-200 transition-colors duration-300">
-                I am a <span className="text-blue-400 font-semibold">Software Engineering</span> student at 
-                <span className="text-purple-400 font-semibold"> UTAMU</span> (Uganda Technology and Management University) 
-                and a <span className="text-cyan-400 font-semibold">Fullstack Web Developer (MEVN STACK)</span>, 
-                Backend developer in Node/Express.js and Java. I enjoy building practical solutions, 
-                learning deeply, and contributing to meaningful projects.
+                Detail-oriented <span className="text-blue-400 font-semibold">Software Engineering</span> student with over 
+                2 years of hands-on experience in <span className="text-cyan-400 font-semibold">full-stack web development</span>, 
+                <span className="text-green-400 font-semibold"> data validation</span>, and 
+                <span className="text-purple-400 font-semibold"> API integration</span>. Strong technical foundation in 
+                testing web and mobile applications, executing regression tests, and verifying data integrity. 
+                Adept at using Postman for JSON-based API validation and writing SQL/database queries.
               </p>
             </div>
 
@@ -140,14 +141,34 @@ const About = () => {
               </ul>
             </div>
 
-            {/* Mission */}
-            <div className="p-6 bg-gradient-to-r from-yellow-500/10 to-orange-500/10 rounded-xl border border-yellow-500/20 text-center">
-              <p className="text-yellow-400 font-semibold text-lg">
-                Ultimate Goal: Join SpaceX, NASA, or ESA
-              </p>
-              <p className="text-gray-400 text-sm mt-2">
-                Working towards making humanity a multi-planetary species
-              </p>
+            {/* Languages */}
+            <div className="glass-effect rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
+              <div className="flex items-center gap-4 mb-6">
+                <div className="p-3 bg-gradient-to-br from-yellow-500/20 to-orange-500/20 rounded-xl border border-yellow-500/30 group-hover:border-yellow-400/50 transition-all duration-300">
+                  <Code className="text-yellow-400" size={24} />
+                </div>
+                <h3 className="text-2xl font-semibold text-white">Languages</h3>
+              </div>
+              <div className="space-y-3">
+                <div className="flex items-center justify-between">
+                  <span className="text-gray-300">English</span>
+                  <span className="px-3 py-1 bg-green-500/20 text-green-400 rounded-full text-xs border border-green-500/30">Advanced</span>
+                </div>
+                <div className="flex items-center justify-between">
+                  <span className="text-gray-300">Swahili</span>
+                  <span className="px-3 py-1 bg-blue-500/20 text-blue-400 rounded-full text-xs border border-blue-500/30">Native</span>
+                </div>
+                <div className="flex items-center justify-between">
+                  <span className="text-gray-300">Italian</span>
+                  <span className="px-3 py-1 bg-purple-500/20 text-purple-400 rounded-full text-xs border border-purple-500/30">Beginner</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Hobbies */}
+            <div className="p-6 bg-gradient-to-r from-yellow-500/10 to-orange-500/10 rounded-xl border border-yellow-500/20">
+              <p className="text-yellow-400 font-semibold text-lg mb-2">Hobbies</p>
+              <p className="text-gray-300">Gymnastics and Fitness | Reading Novels</p>
             </div>
           </motion.div>
         </div>

@@ -1,44 +1,51 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Code, Database, Brain, Globe, Terminal, Wrench } from 'lucide-react'
+import { Code, Database, Brain, Globe, Terminal, Wrench, Bug, Users } from 'lucide-react'
 
 const Skills = () => {
   const skillCategories = [
     {
-      title: 'Programming Languages',
-      icon: <Code className="text-blue-400" size={24} />,
-      skills: ['Python', 'C', 'JavaScript '],
-      color: 'from-blue-500/20 to-blue-600/20',
+      title: 'QA & Testing',
+      icon: <Bug className="text-red-400" size={24} />,
+      skills: ['STLC', 'Functional Testing', 'Integration Testing', 'Regression Testing (TNR)', 'Test Case Design', 'Defect Logging'],
+      color: 'from-red-500/20 to-pink-600/20',
+      borderColor: 'border-red-500/30'
+    },
+    {
+      title: 'API & Data Validation',
+      icon: <Globe className="text-blue-400" size={24} />,
+      skills: ['Postman', 'JSON', 'XML', 'REST APIs', 'Git/GitHub'],
+      color: 'from-blue-500/20 to-cyan-600/20',
       borderColor: 'border-blue-500/30'
     },
     {
-      title: 'Data Science & Analytics',
+      title: 'Databases & Querying',
       icon: <Database className="text-green-400" size={24} />,
-      skills: ['Pandas', 'NumPy', 'Scikit-learn', 'Power BI'],
+      skills: ['SQL (Queries, Joins)', 'MongoDB', 'Data Verification'],
       color: 'from-green-500/20 to-emerald-600/20',
       borderColor: 'border-green-500/30'
     },
     {
-      title: 'AI & Machine Learning',
-      icon: <Brain className="text-purple-400" size={24} />,
-      skills: ['LangChain', 'LangGraph', 'Hugging Face', 'Transformers', 'RAG Pipelines', 'MCP', 'LiteLLM','CrewAI'],
-      color: 'from-purple-500/20 to-purple-600/20',
+      title: 'Development',
+      icon: <Code className="text-purple-400" size={24} />,
+      skills: ['JavaScript (Vue.js, Node.js, Express.js)', 'Python (Pandas, Automation)', 'Flutter/Dart'],
+      color: 'from-purple-500/20 to-violet-600/20',
       borderColor: 'border-purple-500/30'
     },
     {
-      title: 'Web Development',
-      icon: <Globe className="text-cyan-400" size={24} />,
-      skills: ['React', 'Next.js', 'MERN Stack (Learning)', 'Chatbot Integration', 'Gradient UI'],
-      color: 'from-cyan-500/20 to-cyan-600/20',
-      borderColor: 'border-cyan-500/30'
+      title: 'Methodologies & Tools',
+      icon: <Wrench className="text-orange-400" size={24} />,
+      skills: ['Agile/Scrum', 'JIRA', 'Power BI'],
+      color: 'from-orange-500/20 to-amber-600/20',
+      borderColor: 'border-orange-500/30'
     },
     {
-      title: 'Tools & Technologies',
-      icon: <Wrench className="text-orange-400" size={24} />,
-      skills: ['Git & GitHub', 'Jupyter Notebook', 'Postman', 'Linux (Ubuntu)', 'VS Code'],
-      color: 'from-orange-500/20 to-orange-600/20',
-      borderColor: 'border-orange-500/30'
+      title: 'Soft Skills',
+      icon: <Users className="text-cyan-400" size={24} />,
+      skills: ['Leadership', 'Communication', 'Team Coordination', 'Problem Solving', 'Event Coordination', 'Community Engagement'],
+      color: 'from-cyan-500/20 to-teal-600/20',
+      borderColor: 'border-cyan-500/30'
     }
   ]
 
@@ -185,7 +192,7 @@ const Skills = () => {
               <ul className="space-y-2">
                 <li className="flex items-center gap-2 text-gray-300">
                   <div className="w-2 h-2 bg-cyan-400 rounded-full"></div>
-                  LangChain & AI Frameworks
+                  ISTQB Certification
                 </li>
                 <li className="flex items-center gap-2 text-gray-300">
                   <div className="w-2 h-2 bg-orange-400 rounded-full"></div>

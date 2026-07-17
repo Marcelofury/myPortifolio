@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { ExternalLink, Github, Music, Bot, Heart, Rocket, Eye, Filter, TrendingUp, Target, Award } from 'lucide-react'
+import { ExternalLink, Github, ShoppingCart, Tractor, Recycle, Music, Bot, Eye, Filter, TrendingUp, Target, Award } from 'lucide-react'
 import { useState } from 'react'
 
 type ImpactLevel = 'High Impact' | 'Medium Impact' | 'Learning Project'
@@ -28,8 +28,56 @@ const Projects = () => {
 
   const projects: Project[] = [
     {
+      title: 'Karibu Grocery Limited',
+      description: 'Full-stack grocery management web application with functional and integration test cases designed using Agile/Scrum frameworks.',
+      technologies: ['Vue.js', 'Node.js', 'Express.js', 'MongoDB', 'Postman'],
+      icon: <ShoppingCart className="text-green-400" size={24} />,
+      category: 'Web Development',
+      status: 'Completed',
+      github: 'https://github.com/Marcelofury/KaribuGroceryLimited',
+      demo: null,
+      impact: {
+        level: 'High Impact',
+        metrics: ['Full-stack application', 'API testing with Postman', 'Regression testing (TNR)'],
+        realWorldUse: 'Grocery management system for business operations',
+        businessValue: 'Demonstrates end-to-end testing and full-stack development skills'
+      }
+    },
+    {
+      title: 'AgriSupply Farm Connect System',
+      description: 'Digital marketplace that connects farmers and buyers in Uganda, enabling direct trade and reducing middlemen.',
+      technologies: ['JavaScript', 'Node.js', 'Express.js', 'MongoDB', 'React'],
+      icon: <Tractor className="text-yellow-400" size={24} />,
+      category: 'Web Development',
+      status: 'Completed',
+      github: 'https://github.com/Marcelofury/AgriSupply-Farm-Connect-System',
+      demo: null,
+      impact: {
+        level: 'High Impact',
+        metrics: ['Agricultural marketplace', 'Farmer-buyer connection', 'Uganda-focused'],
+        realWorldUse: 'Digital platform for agricultural trade in Uganda',
+        businessValue: 'Supports local farmers and food supply chain'
+      }
+    },
+    {
+      title: 'Gabbage Free City',
+      description: 'Smart waste management system for Kampala, using technology to optimize waste collection and recycling.',
+      technologies: ['JavaScript', 'Node.js', 'React', 'MongoDB'],
+      icon: <Recycle className="text-cyan-400" size={24} />,
+      category: 'Web Development',
+      status: 'Completed',
+      github: 'https://github.com/Marcelofury/GabbageFreeCity',
+      demo: null,
+      impact: {
+        level: 'High Impact',
+        metrics: ['Waste management solution', 'City-scale application', 'Environmental impact'],
+        realWorldUse: 'Smart waste management for Kampala city',
+        businessValue: 'Solves urban waste challenges through technology'
+      }
+    },
+    {
       title: 'MoodMelody Music Recommender',
-      description: 'AI-powered music recommendation system that analyzes user mood and preferences to suggest personalized playlists using machine learning algorithms.',
+      description: 'AI-powered music recommendation system that analyzes user mood and preferences to suggest personalized playlists.',
       technologies: ['TypeScript', 'Machine Learning', 'AI', 'React'],
       icon: <Music className="text-pink-400" size={24} />,
       category: 'AI/ML',
@@ -37,48 +85,16 @@ const Projects = () => {
       github: 'https://github.com/Marcelofury/MoodMelody-music-recommender',
       demo: null,
       impact: {
-        level: 'High Impact',
-        metrics: ['AI-powered recommendations', 'Personalized user experience', 'ML algorithm implementation'],
-        realWorldUse: 'Music streaming application serving users with mood-based playlist generation',
-        businessValue: 'Enhances user engagement and retention in music platforms'
-      }
-    },
-    {
-      title: 'Hope for the Children NGO Website',
-      description: 'Charity organization website designed to support children in need with donation capabilities and impact showcasing.',
-      technologies: ['CSS', 'HTML', 'JavaScript', 'Web Design'],
-      icon: <Heart className="text-red-400" size={24} />,
-      category: 'Web Development',
-      status: 'Completed',
-      github: 'https://github.com/Marcelofury/HOPE-FOR-THE-CHILDREN',
-      demo: null,
-      impact: {
-        level: 'High Impact',
-        metrics: ['Supporting children\'s charity', 'Donation platform', 'Community impact showcase'],
-        realWorldUse: 'Active charity website helping connect donors with children in need',
-        businessValue: 'Enables digital presence for NGO, facilitating online donations and awareness'
-      }
-    },
-    {
-      title: 'NASA Small Satellites Simulator',
-      description: 'Forked NASA Operational Simulator for Small Satellites - contributing to space technology and satellite operations.',
-      technologies: ['C', 'Space Technology', 'Simulation', 'Embedded Systems'],
-      icon: <Rocket className="text-cyan-400" size={24} />,
-      category: 'Space Tech',
-      status: 'Contributing',
-      github: 'https://github.com/Marcelofury/nasa-small-satelites',
-      demo: null,
-      impact: {
-        level: 'High Impact',
-        metrics: ['Contributing to space technology', 'Satellite operations simulation', 'Open-source contribution'],
-        realWorldUse: 'NASA-grade simulation tool for satellite operations training and testing',
-        businessValue: 'Supports space industry education and satellite mission planning'
+        level: 'Medium Impact',
+        metrics: ['AI-powered recommendations', 'Personalized user experience'],
+        realWorldUse: 'Music streaming application with mood-based playlists',
+        businessValue: 'Enhances user engagement in music platforms'
       }
     },
     {
       title: 'Paris Travel Guide Chatbot',
       description: 'Intelligent travel guide chatbot for Paris with comprehensive travel information and recommendations using AI.',
-      technologies: ['Python', 'AI', 'Chatbot', 'Natural Language Processing'],
+      technologies: ['Python', 'AI', 'Chatbot', 'NLP'],
       icon: <Bot className="text-blue-400" size={24} />,
       category: 'AI/ML',
       status: 'Completed',
@@ -86,73 +102,25 @@ const Projects = () => {
       demo: null,
       impact: {
         level: 'Medium Impact',
-        metrics: ['AI-powered travel assistance', 'NLP implementation', '24/7 availability'],
+        metrics: ['AI-powered travel assistance', 'NLP implementation'],
         realWorldUse: 'Travel planning assistant for Paris tourists',
-        businessValue: 'Reduces travel planning time and improves tourist experience'
+        businessValue: 'Reduces travel planning time'
       }
     },
     {
       title: 'PDF Reader & Text Extractor',
       description: 'Python tool for extracting text content from PDF documents with a straightforward approach to document processing.',
-      technologies: ['Python', 'PDF Processing', 'Text Extraction', 'Document Analysis'],
-      icon: <Eye className="text-green-400" size={24} />,
+      technologies: ['Python', 'PDF Processing', 'Text Extraction'],
+      icon: <Eye className="text-orange-400" size={24} />,
       category: 'Utility',
       status: 'Completed',
       github: 'https://github.com/Marcelofury/pdfReader',
       demo: null,
       impact: {
-        level: 'Medium Impact',
-        metrics: ['Document processing automation', 'Text extraction accuracy'],
-        realWorldUse: 'Tool for automating PDF document analysis and data extraction',
+        level: 'Learning Project',
+        metrics: ['Document processing', 'Text extraction'],
+        realWorldUse: 'Tool for automating PDF document analysis',
         businessValue: 'Saves time in document processing workflows'
-      }
-    },
-    {
-      title: 'Python Programming Courses',
-      description: 'Comprehensive Python course repository with tutorials, examples, and practical programming exercises for learning.',
-      technologies: ['Python', 'Education', 'Documentation', 'Programming Fundamentals'],
-      icon: <Github className="text-yellow-400" size={24} />,
-      category: 'Education',
-      status: 'Ongoing',
-      github: 'https://github.com/Marcelofury/PyCourses',
-      demo: null,
-      impact: {
-        level: 'Learning Project',
-        metrics: ['Educational resource', 'Programming fundamentals', 'Skill development'],
-        realWorldUse: 'Learning repository for Python programming concepts',
-        businessValue: 'Foundation for advanced programming skills'
-      }
-    },
-    {
-      title: 'JavaScript Programming Courses',
-      description: 'JavaScript learning resources and course materials covering modern JS concepts and practical implementations.',
-      technologies: ['JavaScript', 'Education', 'Web Development', 'ES6+'],
-      icon: <Rocket className="text-purple-400" size={24} />,
-      category: 'Education',
-      status: 'Ongoing',
-      github: 'https://github.com/Marcelofury/jsCourses',
-      demo: null,
-      impact: {
-        level: 'Learning Project',
-        metrics: ['Modern JavaScript', 'ES6+ features', 'Web development'],
-        realWorldUse: 'Learning repository for JavaScript programming',
-        businessValue: 'Foundation for web development expertise'
-      }
-    },
-    {
-      title: 'Temperature Conversion Program',
-      description: 'Interactive web application for converting between Fahrenheit and Celsius temperatures with clean UI.',
-      technologies: ['HTML', 'CSS', 'JavaScript', 'Web Development'],
-      icon: <ExternalLink className="text-orange-400" size={24} />,
-      category: 'Web Development',
-      status: 'Completed',
-      github: 'https://github.com/Marcelofury/TEMPERATURE-CONVERSION-PROGRAM',
-      demo: null,
-      impact: {
-        level: 'Learning Project',
-        metrics: ['Basic web development', 'DOM manipulation', 'User interaction'],
-        realWorldUse: 'Simple utility application for temperature conversion',
-        businessValue: 'Foundation project for web development skills'
       }
     }
   ]
@@ -172,7 +140,7 @@ const Projects = () => {
       return impactOrder[a.impact.level] - impactOrder[b.impact.level]
     })
 
-  const filterOptions = ['All', 'High Impact', 'AI/ML', 'Web Development', 'Education', 'Utility', 'Space Tech']
+  const filterOptions = ['All', 'High Impact', 'AI/ML', 'Web Development', 'Utility']
 
   const getImpactBadgeStyle = (level: ImpactLevel) => {
     switch (level) {
@@ -206,9 +174,7 @@ const Projects = () => {
     switch (category) {
       case 'AI/ML': return 'from-purple-500/10 to-pink-500/10 border-purple-500/20'
       case 'Web Development': return 'from-cyan-500/10 to-blue-500/10 border-cyan-500/20'
-      case 'Education': return 'from-green-500/10 to-emerald-500/10 border-green-500/20'
       case 'Utility': return 'from-orange-500/10 to-red-500/10 border-orange-500/20'
-      case 'Space Tech': return 'from-indigo-500/10 to-purple-500/10 border-indigo-500/20'
       default: return 'from-gray-500/10 to-slate-500/10 border-gray-500/20'
     }
   }
@@ -232,7 +198,7 @@ const Projects = () => {
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-blue-400 to-purple-400 mx-auto mb-4"></div>
           <p className="text-gray-300 text-lg max-w-3xl mx-auto leading-relaxed">
-            A showcase of my work in AI, web development, and software engineering, 
+            A showcase of my work in web development, AI, and software engineering, 
             demonstrating practical solutions and innovative approaches to real-world problems.
           </p>
         </motion.div>
@@ -384,7 +350,7 @@ const Projects = () => {
           <h3 className="text-2xl font-semibold text-white mb-8 text-center">Project Overview</h3>
           <div className="grid md:grid-cols-4 gap-6">
             <div className="text-center">
-              <div className="text-3xl font-bold text-blue-400 mb-2">8+</div>
+              <div className="text-3xl font-bold text-blue-400 mb-2">6+</div>
               <p className="text-gray-300">Featured Projects</p>
             </div>
             <div className="text-center">

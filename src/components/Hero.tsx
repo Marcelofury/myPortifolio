@@ -1,15 +1,56 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { ChevronDown, Download, Briefcase, Code, Award, Users } from 'lucide-react'
+import { ChevronDown, Download, Briefcase, Code, Award, Users, Zap } from 'lucide-react'
 import Image from 'next/image'
+import { useEffect, useState } from 'react'
 
 const Hero = () => {
+  const [typingText, setTypingText] = useState('')
+  const [isDeleting, setIsDeleting] = useState(false)
+  const [loopNum, setLoopNum] = useState(0)
+  const [typingSpeed, setTypingSpeed] = useState(150)
+  
+  const roles = [
+    'Junior Software Tester',
+    'QUALITY ASSURANCE (QA) ENGINEER',
+    'Software Engineering Student',
+    'Full Stack Javascript Developer',
+    'Tech for Impact',
+    'Learning Every Day',
+    'Open to Collaboration'
+  ]
+
+  useEffect(() => {
+    const handleTyping = () => {
+      const currentIndex = loopNum % roles.length
+      const fullText = roles[currentIndex]
+
+      setTypingText(
+        isDeleting
+          ? fullText.substring(0, typingText.length - 1)
+          : fullText.substring(0, typingText.length + 1)
+      )
+
+      setTypingSpeed(isDeleting ? 50 : 150)
+
+      if (!isDeleting && typingText === fullText) {
+        setTimeout(() => setIsDeleting(true), 1500)
+      } else if (isDeleting && typingText === '') {
+        setIsDeleting(false)
+        setLoopNum(loopNum + 1)
+      }
+    }
+
+    const timer = setTimeout(handleTyping, typingSpeed)
+    return () => clearTimeout(timer)
+  }, [typingText, isDeleting, loopNum, typingSpeed])
+
   const quickStats = [
     { icon: <Briefcase size={20} />, label: 'Experience', value: '2+ Years' },
-    { icon: <Code size={20} />, label: 'Projects', value: '8+ Active' },
+    { icon: <Code size={20} />, label: 'Projects', value: '60+ Repos' },
     { icon: <Award size={20} />, label: 'Technologies', value: '15+' },
-    { icon: <Users size={20} />, label: 'Impact', value: '500+ Users' }
+    { icon: <Zap size={20} />, label: 'Impact', value: '500+ Users' }
   ]
 
   return (
@@ -34,8 +75,11 @@ const Hero = () => {
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
+              <span className="text-gray-200 drop-shadow-lg">
+                Hi, I&apos;m{' '}
+              </span>
               <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent drop-shadow-lg">
-                Marcel Butera
+                BUTERA Marcel
               </span>
             </motion.h1>
             
@@ -45,14 +89,22 @@ const Hero = () => {
               animate={{ opacity: 1 }}
               transition={{ duration: 0.8, delay: 0.4 }}
             >
-              <p className="text-xl md:text-2xl text-gray-300 font-medium">
-                Software Engineer | Data Analyst | AI Enthusiast
-              </p>
+              {/* Typing Animation */}
+              <div className="h-16 flex items-center justify-center lg:justify-start">
+                <div className="text-2xl md:text-3xl font-bold">
+                  <span className="bg-gradient-to-r from-yellow-400 via-orange-400 to-red-400 bg-clip-text text-transparent">
+                    {typingText}
+                  </span>
+                  <span className="animate-pulse text-purple-400">|</span>
+                </div>
+              </div>
               
               <p className="text-lg md:text-xl text-gray-400 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
-                Passionate about building innovative solutions in Software Engineering, 
-                Data Analytics, Artificial Intelligence, and Space Technology. 
-                <span className="text-yellow-400 font-semibold block mt-2"> Dream: To work at SpaceX, NASA, or ESA.</span>
+                Detail-oriented Software Engineering student with over 2 years of hands-on experience 
+                in full-stack web development, data validation, and API integration. 
+                <span className="text-cyan-400 font-semibold block mt-2">
+                  Focused on building impactful solutions through quality code.
+                </span>
               </p>
             </motion.div>
             
