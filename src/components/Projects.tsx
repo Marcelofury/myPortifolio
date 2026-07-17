@@ -2,7 +2,7 @@
 
 import React from 'react'
 import { motion } from 'framer-motion'
-import { ExternalLink, Github, Music, Bot, Heart, Rocket, Eye, Filter, TrendingUp, Target, Award } from 'lucide-react'
+import { ExternalLink, Github, ShoppingCart, Tractor, Recycle, Building2, ShoppingBag, Dumbbell, Heart, Rocket, Eye, Filter, TrendingUp, Target, Award } from 'lucide-react'
 import { useState } from 'react'
 
 type ImpactLevel = 'High Impact' | 'Medium Impact' | 'Learning Project'
@@ -29,26 +29,106 @@ const Projects = () => {
 
   const projects: Project[] = [
     {
-      title: 'MoodMelody Music Recommender',
-      description: 'AI-powered music recommendation system that analyzes user mood and preferences to suggest personalized playlists.',
-      technologies: ['TypeScript', 'Machine Learning', 'AI', 'React'],
-      icon: <Music className="text-pink-400" size={24} />,
-      category: 'AI/ML',
+      title: 'Karibu Grocery Limited',
+      description: 'Full-stack grocery management web application with functional and integration test cases designed using Agile/Scrum frameworks.',
+      technologies: ['Vue.js', 'Node.js', 'Express.js', 'MongoDB', 'Postman'],
+      icon: <ShoppingCart className="text-green-400" size={24} />,
+      category: 'Web Development',
       status: 'Completed',
-      github: 'https://github.com/Marcelofury/MoodMelody-music-recommender',
+      github: 'https://github.com/Marcelofury/KaribuGroceryLimited',
       demo: null,
       impact: {
         level: 'High Impact',
-        metrics: ['AI-powered recommendations', 'Personalized user experience', 'ML algorithm implementation'],
-        realWorldUse: 'Music streaming application serving users with mood-based playlist generation',
-        businessValue: 'Enhances user engagement and retention in music platforms'
+        metrics: ['Full-stack application', 'API testing with Postman', 'Regression testing (TNR)'],
+        realWorldUse: 'Grocery management system for business operations',
+        businessValue: 'Demonstrates end-to-end testing and full-stack development skills'
+      }
+    },
+    {
+      title: 'AgriSupply Farm Connect System',
+      description: 'Digital marketplace that connects farmers and buyers in Uganda, enabling direct trade and reducing middlemen.',
+      technologies: ['JavaScript', 'Node.js', 'Express.js', 'MongoDB', 'React'],
+      icon: <Tractor className="text-yellow-400" size={24} />,
+      category: 'Web Development',
+      status: 'Completed',
+      github: 'https://github.com/Marcelofury/AgriSupply-Farm-Connect-System',
+      demo: null,
+      impact: {
+        level: 'High Impact',
+        metrics: ['Agricultural marketplace', 'Farmer-buyer connection', 'Uganda-focused'],
+        realWorldUse: 'Digital platform for agricultural trade in Uganda',
+        businessValue: 'Supports local farmers and food supply chain'
+      }
+    },
+    {
+      title: 'Gabbage Free City',
+      description: 'Smart waste management system for Kampala, using technology to optimize waste collection and recycling.',
+      technologies: ['JavaScript', 'Node.js', 'React', 'MongoDB'],
+      icon: <Recycle className="text-cyan-400" size={24} />,
+      category: 'Web Development',
+      status: 'Completed',
+      github: 'https://github.com/Marcelofury/GabbageFreeCity',
+      demo: null,
+      impact: {
+        level: 'High Impact',
+        metrics: ['Waste management solution', 'City-scale application', 'Environmental impact'],
+        realWorldUse: 'Smart waste management for Kampala city',
+        businessValue: 'Solves urban waste challenges through technology'
+      }
+    },
+    {
+      title: 'DojoHub ERP',
+      description: 'A full-stack role-based Enterprise Resource Planning system for Dojo Hub Uganda, a Juice Manufacturing Company.',
+      technologies: ['React 18', 'TypeScript', 'Vite', 'Tailwind CSS', 'Express 4', 'PostgreSQL', 'Supabase'],
+      icon: <Building2 className="text-purple-400" size={24} />,
+      category: 'Web Development',
+      status: 'Completed',
+      github: 'https://github.com/Marcelofury/DojoHub-ERP',
+      demo: null,
+      impact: {
+        level: 'High Impact',
+        metrics: ['Role-based ERP', 'Full-stack architecture', 'Manufacturing industry'],
+        realWorldUse: 'Enterprise resource planning for juice manufacturing',
+        businessValue: 'Streamlines business operations and inventory management'
+      }
+    },
+    {
+      title: 'MercaShop',
+      description: 'E-commerce platform designed for seamless online shopping experience with modern web technologies.',
+      technologies: ['JavaScript', 'Node.js', 'Express.js', 'MongoDB'],
+      icon: <ShoppingBag className="text-blue-400" size={24} />,
+      category: 'Web Development',
+      status: 'Completed',
+      github: 'https://github.com/Marcelofury/mercashop',
+      demo: null,
+      impact: {
+        level: 'Medium Impact',
+        metrics: ['E-commerce solution', 'Online shopping platform', 'Payment integration'],
+        realWorldUse: 'Online marketplace for retail businesses',
+        businessValue: 'Enables digital commerce for small businesses'
+      }
+    },
+    {
+      title: 'PRO-FITNESS',
+      description: 'A fitness Android app developed using Kotlin and Node/Express.js, MongoDB for tracking workouts and nutrition.',
+      technologies: ['Kotlin', 'Node.js', 'Express.js', 'MongoDB', 'Android'],
+      icon: <Dumbbell className="text-red-400" size={24} />,
+      category: 'Mobile Development',
+      status: 'Completed',
+      github: 'https://github.com/Marcelofury/PRO-FITNESS',
+      demo: null,
+      impact: {
+        level: 'High Impact',
+        metrics: ['Android application', 'Fitness tracking', 'Full-stack mobile app'],
+        realWorldUse: 'Personal fitness and workout tracking application',
+        businessValue: 'Promotes health and fitness through technology'
       }
     },
     {
       title: 'Hope for the Children NGO Website',
       description: 'Charity organization website designed to support children in need with donation capabilities and impact showcasing.',
       technologies: ['CSS', 'HTML', 'JavaScript', 'Web Design'],
-      icon: <Heart className="text-red-400" size={24} />,
+      icon: <Heart className="text-pink-400" size={24} />,
       category: 'Web Development',
       status: 'Completed',
       github: 'https://github.com/Marcelofury/HOPE-FOR-THE-CHILDREN',
@@ -77,22 +157,6 @@ const Projects = () => {
       }
     },
     {
-      title: 'Paris Travel Guide Chatbot',
-      description: 'Intelligent travel guide chatbot for Paris with comprehensive travel information and recommendations using AI.',
-      technologies: ['Python', 'AI', 'Chatbot', 'NLP'],
-      icon: <Bot className="text-blue-400" size={24} />,
-      category: 'AI/ML',
-      status: 'Completed',
-      github: 'https://github.com/Marcelofury/parisTravelGuideChatbot',
-      demo: null,
-      impact: {
-        level: 'Medium Impact',
-        metrics: ['AI-powered travel assistance', 'NLP implementation', '24/7 availability'],
-        realWorldUse: 'Travel planning assistant for Paris tourists',
-        businessValue: 'Reduces travel planning time and improves tourist experience'
-      }
-    },
-    {
       title: 'PDF Reader & Text Extractor',
       description: 'Python tool for extracting text content from PDF documents with a straightforward approach to document processing.',
       technologies: ['Python', 'PDF Processing', 'Text Extraction'],
@@ -106,54 +170,6 @@ const Projects = () => {
         metrics: ['Document processing automation', 'Text extraction accuracy'],
         realWorldUse: 'Tool for automating PDF document analysis and data extraction',
         businessValue: 'Saves time in document processing workflows'
-      }
-    },
-    {
-      title: 'Python Programming Courses',
-      description: 'Comprehensive Python course repository with tutorials, examples, and practical programming exercises for learning.',
-      technologies: ['Python', 'Education', 'Documentation', 'Programming Fundamentals'],
-      icon: <Github className="text-yellow-400" size={24} />,
-      category: 'Education',
-      status: 'Ongoing',
-      github: 'https://github.com/Marcelofury/PyCourses',
-      demo: null,
-      impact: {
-        level: 'Learning Project',
-        metrics: ['Educational resource', 'Programming fundamentals', 'Skill development'],
-        realWorldUse: 'Learning repository for Python programming concepts',
-        businessValue: 'Foundation for advanced programming skills'
-      }
-    },
-    {
-      title: 'JavaScript Programming Courses',
-      description: 'JavaScript learning resources and course materials covering modern JS concepts and practical implementations.',
-      technologies: ['JavaScript', 'Education', 'Web Development', 'ES6+'],
-      icon: <Rocket className="text-purple-400" size={24} />,
-      category: 'Education',
-      status: 'Ongoing',
-      github: 'https://github.com/Marcelofury/jsCourses',
-      demo: null,
-      impact: {
-        level: 'Learning Project',
-        metrics: ['Modern JavaScript', 'ES6+ features', 'Web development'],
-        realWorldUse: 'Learning repository for JavaScript programming',
-        businessValue: 'Foundation for web development expertise'
-      }
-    },
-    {
-      title: 'Temperature Conversion Program',
-      description: 'Interactive web application for converting between Fahrenheit and Celsius temperatures with clean UI.',
-      technologies: ['HTML', 'CSS', 'JavaScript', 'Web Development'],
-      icon: <ExternalLink className="text-orange-400" size={24} />,
-      category: 'Web Development',
-      status: 'Completed',
-      github: 'https://github.com/Marcelofury/TEMPERATURE-CONVERSION-PROGRAM',
-      demo: null,
-      impact: {
-        level: 'Learning Project',
-        metrics: ['Basic web development', 'DOM manipulation', 'User interaction'],
-        realWorldUse: 'Simple utility application for temperature conversion',
-        businessValue: 'Foundation project for web development skills'
       }
     }
   ]
@@ -175,7 +191,7 @@ const Projects = () => {
       return impactOrder[a.impact.level] - impactOrder[b.impact.level]
     })
 
-  const filterOptions = ['All', 'High Impact', 'AI/ML', 'AI/Web', 'Web Development', 'Education', 'Utility', 'Space Tech']
+  const filterOptions = ['All', 'High Impact', 'Web Development', 'Mobile Development', 'Space Tech', 'Utility']
 
   const getImpactBadgeStyle = (level: ImpactLevel) => {
     switch (level) {
@@ -207,9 +223,10 @@ const Projects = () => {
 
   const getCategoryColor = (category: string) => {
     switch (category) {
-      case 'AI/ML': return 'from-purple-500/10 to-pink-500/10 border-purple-500/20'
       case 'Web Development': return 'from-cyan-500/10 to-blue-500/10 border-cyan-500/20'
+      case 'Mobile Development': return 'from-green-500/10 to-emerald-500/10 border-green-500/20'
       case 'Utility': return 'from-orange-500/10 to-red-500/10 border-orange-500/20'
+      case 'Space Tech': return 'from-purple-500/10 to-pink-500/10 border-purple-500/20'
       default: return 'from-gray-500/10 to-slate-500/10 border-gray-500/20'
     }
   }
