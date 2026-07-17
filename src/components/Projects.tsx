@@ -1,5 +1,6 @@
 'use client'
 
+import React from 'react'
 import { motion } from 'framer-motion'
 import { ExternalLink, Github, Music, Bot, Heart, Rocket, Eye, Filter, TrendingUp, Target, Award } from 'lucide-react'
 import { useState } from 'react'
@@ -10,7 +11,7 @@ interface Project {
   title: string
   description: string
   technologies: string[]
-  icon: JSX.Element
+  icon: React.ReactNode
   category: string
   status: string
   github: string
